@@ -1,0 +1,47 @@
+# =============================================================
+# logs_and_models — provenance and results only.
+# Weights and predictions are on Hugging Face
+# (Lasbaskanenmas/befaestelsesdata-spatial-matrix) and on the VM.
+# =============================================================
+
+# 72 final .pth, 794 per-epoch checkpoints (657 GB), 463,536 GeoTIFFs
+**/models/
+
+# belt and braces for anything outside those trees
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.tif
+*.tiff
+*.tif.ovr
+*.tif.aux.xml
+*.tfw
+*.npy
+*.npz
+*.pkl
+*.zip
+*.7z
+*.tar
+*.tar.gz
+
+# transient monitoring state
+_monitor_state.json
+
+# secrets
+*token*
+*secret*
+*credential*
+.env
+.env.*
+*.key
+*.pem
+
+# python / editor noise
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini

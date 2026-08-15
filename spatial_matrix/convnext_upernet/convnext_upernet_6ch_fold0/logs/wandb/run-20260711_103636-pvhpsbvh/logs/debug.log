@@ -1,0 +1,24 @@
+2026-07-11 10:36:36,009 INFO    MainThread:3696 [wandb_setup.py:_flush():81] Current SDK version is 0.27.0
+2026-07-11 10:36:36,009 INFO    MainThread:3696 [wandb_setup.py:_flush():81] Configure stats pid to 3696
+2026-07-11 10:36:36,009 INFO    MainThread:3696 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-07-11 10:36:36,009 INFO    MainThread:3696 [wandb_init.py:setup_run_log_directory():723] Logging user logs to ..\logs_and_models\spatial_matrix\convnext_upernet\convnext_upernet_6ch_fold0\logs\wandb\run-20260711_103636-pvhpsbvh\logs\debug.log
+2026-07-11 10:36:36,009 INFO    MainThread:3696 [wandb_init.py:setup_run_log_directory():724] Logging internal logs to ..\logs_and_models\spatial_matrix\convnext_upernet\convnext_upernet_6ch_fold0\logs\wandb\run-20260711_103636-pvhpsbvh\logs\debug-internal.log
+2026-07-11 10:36:36,010 INFO    MainThread:3696 [wandb_init.py:init():851] calling init triggers
+2026-07-11 10:36:36,010 INFO    MainThread:3696 [wandb_init.py:init():856] wandb.init called with sweep_config: {}
+config: {'model': 'convnext_base_upernet', 'dev_mode': 'False', 'model_to_load': '..\\logs_and_models\\spatial_matrix\\convnext_upernet\\convnext_upernet_6ch_fold0\\models\\convnext_upernet_6ch_fold0.pth', 'datatypes': "['rgb', 'cir', 'DSM', 'DTM']", 'channels': '[[0, 1, 2], [0], [0], [0]]', 'means': '[0.485, 0.456, 0.406, 0.40779021, 0.5, 0.5]', 'stds': '[0.229, 0.224, 0.225, 0.15176421, 1.0, 1.0]', 'ignore_index': '0', 'batch_size': '4', 'to_fp16': 'False', 'to_bf16': 'True', 'tf32': 'False', 'cudnn_benchmark': 'True', 'pin_memory': 'True', 'prefetch_factor': '2', 'num_workers': '4', 'save_workers': '2', 'transforms': '[]', 'im_type': '.tif', 'label_image_type': '.tif', 'extra_labels': 'None', 'show': 'False', 'droppable_channels': '[]', 'save_probs': 'False', 'save_preds': 'True', 'saved_probs_format': 'uint8', 'crop_size': 'False', 'use_wandb': 'True', 'wandb_project': 'thesis spatial matrix', 'benchmark_folder': '..\\multi_channel_dataset_creation\\example_dataset\\data\\splitted', 'path_to_images': '..\\multi_channel_dataset_creation\\example_dataset\\data\\splitted\\rgb', 'path_to_labels': '..\\multi_channel_dataset_creation\\example_dataset\\labels\\splitted_labels', 'path_to_dataset': '..\\multi_channel_dataset_creation\\example_dataset', 'path_to_all_benchmarkset_txt': '..\\logs_and_models\\route_class_audit\\fold_0_valid.txt', 'output_folder': '..\\logs_and_models\\spatial_matrix\\convnext_upernet\\convnext_upernet_6ch_fold0\\models\\example_dataset', 'path_to_codes': '..\\multi_channel_dataset_creation\\example_dataset\\labels\\codes.txt', 'experiment_root': '..\\logs_and_models\\spatial_matrix\\convnext_upernet', 'job_name': 'infer_convnext_upernet_6ch_fold0', 'path_to_all_txt': '..\\logs_and_models\\route_class_audit\\fold_0_valid.txt', 'path_to_valid_txt': 'False', 'model_folder': 'C:\\thesis\\logs_and_models\\spatial_matrix\\convnext_upernet\\convnext_upernet_6ch_fold0\\models', 'log_folder': '..\\logs_and_models\\spatial_matrix\\convnext_upernet\\convnext_upernet_6ch_fold0\\logs', 'sceduler': 'fit_one_cycle', '_wandb': {}}
+2026-07-11 10:36:36,010 INFO    MainThread:3696 [wandb_init.py:init():899] starting backend
+2026-07-11 10:36:37,468 INFO    MainThread:3696 [wandb_init.py:init():914] sending inform_init request
+2026-07-11 10:36:37,981 INFO    MainThread:3696 [wandb_init.py:init():919] backend started and connected
+2026-07-11 10:36:37,985 INFO    MainThread:3696 [wandb_init.py:init():989] updated telemetry
+2026-07-11 10:36:37,990 INFO    MainThread:3696 [wandb_init.py:init():1012] communicating run to backend with 90.0 second timeout
+2026-07-11 10:36:38,333 INFO    MainThread:3696 [wandb_init.py:init():1057] starting run threads in backend
+2026-07-11 10:36:38,596 INFO    MainThread:3696 [wandb_run.py:_console_start():2509] atexit reg
+2026-07-11 10:36:38,596 INFO    MainThread:3696 [wandb_run.py:_redirect():2359] redirect: wrap_raw
+2026-07-11 10:36:38,596 INFO    MainThread:3696 [wandb_run.py:_redirect():2428] Wrapping output streams.
+2026-07-11 10:36:38,596 INFO    MainThread:3696 [wandb_run.py:_redirect():2451] Redirects installed.
+2026-07-11 10:36:38,601 INFO    MainThread:3696 [wandb_init.py:init():1095] run started, returning control to user process
+2026-07-11 10:52:03,089 INFO    MainThread:3696 [wandb_run.py:_finish():2271] finishing run last24ag-copenhagen-business-school/thesis spatial matrix/pvhpsbvh
+2026-07-11 10:52:03,090 INFO    MainThread:3696 [wandb_run.py:_atexit_cleanup():2476] got exitcode: 0
+2026-07-11 10:52:03,091 INFO    MainThread:3696 [wandb_run.py:_restore():2458] restore
+2026-07-11 10:52:03,091 INFO    MainThread:3696 [wandb_run.py:_restore():2464] restore done
+2026-07-11 10:52:04,296 INFO    MainThread:3696 [wandb_run.py:_footer_sync_info():3877] logging synced files

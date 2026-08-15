@@ -1,0 +1,25 @@
+####################
+classifying in totall : 6440 nr of images
+segmentation images are saved to: ..\logs_and_models\spatial_matrix\swin_upernet\swin_upernet_10ch_fold1\models\example_dataset
+{'model': 'swin-base-upernet', 'dev_mode': False, 'model_to_load': Path('../logs_and_models/spatial_matrix/swin_upernet/swin_upernet_10ch_fold1/models/swin_upernet_10ch_fold1.pth'), 'datatypes': ['rgb', 'cir', 'OrtoRGB', 'OrtoCIR', 'DSM', 'DTM'], 'channels': [[0, 1, 2], [0], [0, 1, 2], [0], [0], [0]], 'means': [0.485, 0.456, 0.406, 0.40779021, 0.485, 0.456, 0.406, 0.40779021, 0.5, 0.5], 'stds': [0.229, 0.224, 0.225, 0.15176421, 0.229, 0.224, 0.225, 0.15176421, 1.0, 1.0], 'ignore_index': 0, 'batch_size': 4, 'to_fp16': False, 'to_bf16': True, 'tf32': False, 'cudnn_benchmark': True, 'pin_memory': True, 'prefetch_factor': 2, 'num_workers': 4, 'save_workers': 2, 'transforms': [], 'im_type': '.tif', 'label_image_type': '.tif', 'extra_labels': 'None', 'show': False, 'droppable_channels': [], 'save_probs': False, 'save_preds': True, 'saved_probs_format': 'uint8', 'crop_size': False, 'use_wandb': True, 'wandb_project': 'thesis spatial matrix', 'benchmark_folder': Path('../multi_channel_dataset_creation/example_dataset/data/splitted'), 'path_to_images': Path('../multi_channel_dataset_creation/example_dataset/data/splitted/rgb'), 'path_to_labels': Path('../multi_channel_dataset_creation/example_dataset/labels/splitted_labels'), 'path_to_dataset': Path('../multi_channel_dataset_creation/example_dataset'), 'path_to_all_benchmarkset_txt': Path('../logs_and_models/route_class_audit/fold_1_valid.txt'), 'output_folder': Path('../logs_and_models/spatial_matrix/swin_upernet/swin_upernet_10ch_fold1/models/example_dataset'), 'path_to_codes': Path('../multi_channel_dataset_creation/example_dataset/labels/codes.txt'), 'experiment_root': Path('../logs_and_models/spatial_matrix/swin_upernet'), 'job_name': 'infer_swin_upernet_10ch_fold1', 'path_to_all_txt': Path('../logs_and_models/route_class_audit/fold_1_valid.txt'), 'path_to_valid_txt': False, 'model_folder': Path('C:/thesis/logs_and_models/spatial_matrix/swin_upernet/swin_upernet_10ch_fold1/models'), 'log_folder': Path('../logs_and_models/spatial_matrix/swin_upernet/swin_upernet_10ch_fold1/logs'), 'sceduler': 'fit_one_cycle'}
+ codes: ['unknown' 'asfalt' 'fliser' 'grus' 'ubefestet' 'green_roof' 'drivhus'
+ 'betonflade' 'brosten' 'unknown2' 'solceller']
+using pin_memory ########################################################################
+experiment_settings_dict['prefetch_factor']: 2
+Using CrossEntropyLoss with ignore_index=0
+Building Swin + UPerNet
+Loaded 11 classes from codes file: ['unknown', 'asfalt', 'fliser', 'grus', 'ubefestet', 'green_roof', 'drivhus', 'betonflade', 'brosten', 'unknown2', 'solceller']
+[transformers] You passed `num_labels=11` which is incompatible to the `id2label` map of length `150`.
+Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 511/511 [00:00<00:00, 3398.41it/s]
+[transformers] [1mUperNetForSemanticSegmentation LOAD REPORT[0m from: openmmlab/upernet-swin-base
+Key                              | Status   |
+---------------------------------+----------+------------------------------------------------------------------------------------------------------
+auxiliary_head.classifier.bias   | [33mMISMATCH[0m | Reinit due to size mismatch - ckpt: torch.Size([150]) vs model:torch.Size([11])
+decode_head.classifier.weight    | [33mMISMATCH[0m | Reinit due to size mismatch - ckpt: torch.Size([150, 512, 1, 1]) vs model:torch.Size([11, 512, 1, 1])
+auxiliary_head.classifier.weight | [33mMISMATCH[0m | Reinit due to size mismatch - ckpt: torch.Size([150, 256, 1, 1]) vs model:torch.Size([11, 256, 1, 1])
+decode_head.classifier.bias      | [33mMISMATCH[0m | Reinit due to size mismatch - ckpt: torch.Size([150]) vs model:torch.Size([11])
+
+Notes:
+- [33mMISMATCH:[0m	[3mckpt weights were loaded, but they did not match the original empty weight shapes.[0m
+training with bf16 mixed precision
+all data has now been predicted                                                                                                        

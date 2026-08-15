@@ -1,0 +1,2 @@
+error_rate;iou_unknown;iou_asfalt;iou_fliser;iou_grus;iou_ubefestet;iou_green_roof;iou_drivhus;iou_betonflade;iou_brosten;iou_unknown2;iou_solceller;subset
+0.03969143021637793;0.0;0.24043557398420473;0.10541155848055121;0.10838307854841946;0.8738713635841756;0.000769836682158385;0.000668099039039603;0.016215574086662615;0.037828477092302706;0.0;0.024914962458013404;..\multi_channel_dataset_creation\example_dataset\data\train.txt

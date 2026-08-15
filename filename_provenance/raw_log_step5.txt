@@ -1,0 +1,46 @@
+cross-fold overlapping tile pairs: 6783
+
+Tiles that share ground with a tile in a DIFFERENT fold:
+  fold 0:   212 / 6439 tiles =  3.29%
+  fold 1:   313 / 6437 tiles =  4.86%
+  fold 2:   756 / 6438 tiles = 11.74%
+  total distinct tiles involved: 1281 / 19314 = 6.63%
+
+  by route (tiles of this route that overlap a different-fold route):
+   82-20    fold=2    522 /   608 =  85.86%
+   82-21    fold=1    313 /   313 = 100.00%
+   84-40    fold=0     62 /  5269 =   1.18%
+   84-41    fold=2     61 /   343 =  17.78%
+   85-45    fold=2    173 /   401 =  43.14%
+   85-48    fold=0    150 /   150 = 100.00%
+
+  overlap per pair (m2 of a 10,000 m2 tile): median=2370 mean=2707 p90=5456 max=9603
+  pairs sharing >50% of a tile: 894  >90%: 23
+
+======================================================================
+LABEL agreement on the shared ground of cross-fold pairs
+======================================================================
+  pairs compared: 40   pixels compared: 23,006,800
+  label agreement on shared ground: mean=100.00%  median=100.00%  min=100.00%  max=100.00%
+  pairs with >95% identical labels: 40/40
+  sample (first 12):
+   85-45/85-48  agree=100.00%  px= 453600  O2023_85_45_1_0024_00001570_8000_1 vs O2023_85_48_1_0052_00000183_6000_2
+   85-45/85-48  agree=100.00%  px= 774000  O2023_85_45_1_0025_00001589_3000_4 vs O2023_85_48_1_0053_00000201_0_0.ti
+   85-45/85-48  agree=100.00%  px= 584800  O2023_85_45_1_0026_00002356_5000_1 vs O2023_85_48_1_0053_00000199_9000_0
+   85-45/85-48  agree=100.00%  px= 524800  O2023_85_45_1_0024_00001571_9000_0 vs O2023_85_48_1_0053_00000200_0_2000
+   85-45/85-48  agree=100.00%  px= 459000  O2023_85_45_1_0024_00001570_8000_1 vs O2023_85_48_1_0053_00000197_0_7000
+   85-45/85-48  agree=100.00%  px= 440000  O2023_85_45_1_0025_00001587_8000_3 vs O2023_85_48_1_0053_00000201_4000_2
+   85-45/85-48  agree=100.00%  px= 669600  O2023_85_45_1_0025_00001589_8870_2 vs O2023_85_48_1_0053_00000199_6000_1
+   82-20/82-21  agree=100.00%  px= 545600  O2021_82_20_1_0024_00005078_10000_ vs O2021_82_21_1_0005_00001868_8000_1
+   82-20/82-21  agree=100.00%  px= 653400  O2021_82_20_1_0024_00005078_0_2000 vs O2021_82_21_1_0004_00002040_10000_
+   85-45/85-48  agree=100.00%  px= 462000  O2023_85_45_1_0026_00002358_1000_3 vs O2023_85_48_1_0053_00000201_5000_2
+   85-45/85-48  agree=100.00%  px= 739500  O2023_85_45_1_0025_00001588_1000_3 vs O2023_85_48_1_0052_00000182_4000_1
+   85-45/85-48  agree=100.00%  px= 410400  O2023_85_45_1_0025_00001586_6000_0 vs O2023_85_48_1_0052_00000181_9000_0
+
+======================================================================
+Within-route duplication: same parent frame vs different parent frame
+======================================================================
+  overlapping pairs from the SAME parent frame      :    3655  sum    21.30 km2
+  overlapping pairs from DIFFERENT parents, same route:   86981  sum   246.78 km2
+  (same-parent overlaps are only the split.py edge clamp; different-parent overlaps are
+   the photogrammetric forward/side overlap between flight frames)

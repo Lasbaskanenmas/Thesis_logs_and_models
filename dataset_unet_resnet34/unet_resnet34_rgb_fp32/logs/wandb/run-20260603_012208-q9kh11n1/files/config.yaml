@@ -1,0 +1,262 @@
+_wandb:
+    value:
+        cli_version: 0.27.0
+        e:
+            imhedtzptgwvvrvnii0txg7l2kmik9f4:
+                args:
+                    - --config
+                    - configs\example_configs\test_resnet34.ini
+                codePath: src\ML_sdfi_fastai2\segformer_train.py
+                codePathLocal: src\ML_sdfi_fastai2\segformer_train.py
+                cpu_count: 64
+                cpu_count_logical: 64
+                cudaVersion: "13.0"
+                disk:
+                    /:
+                        total: "10994469302272"
+                        used: "3402282237952"
+                email: last24ag@student.cbs.dk
+                executable: C:\thesis\envs\ML_sdfi\python.exe
+                git:
+                    commit: 45f11abb77e810f8b5ba3686d113cf07c182a0e2
+                    remote: https://github.com/Klimadatastyrelsen/ML_sdfi_fastai2.git
+                gpu: GRID A100-40C
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ampere
+                      cudaCores: 6912
+                      memoryTotal: "42949672960"
+                      name: GRID A100-40C
+                      uuid: GPU-0877e7dc-2e4b-11b2-a5c4-d667e41cc6e3
+                host: H6-GPU-WIN-03
+                memory:
+                    total: "137437933568"
+                os: Windows-10-10.0.17763-SP0
+                program: C:\thesis\ML_sdfi_fastai2\src\ML_sdfi_fastai2\segformer_train.py
+                python: CPython 3.10.20
+                root: C:\thesis\logs_and_models\dataset_unet_resnet34\unet_resnet34_rgb\logs
+                startedAt: "2026-06-03T08:22:08.856158Z"
+                writerId: imhedtzptgwvvrvnii0txg7l2kmik9f4
+        m: []
+        python_version: 3.10.20
+        t:
+            "1":
+                - 1
+                - 4
+                - 5
+                - 41
+                - 49
+                - 53
+                - 63
+                - 80
+            "2":
+                - 1
+                - 4
+                - 5
+                - 41
+                - 49
+                - 53
+                - 63
+                - 80
+            "3":
+                - 2
+                - 13
+                - 16
+                - 61
+            "4": 3.10.20
+            "5": 0.27.0
+            "8":
+                - 3
+            "12": 0.27.0
+            "13": windows-amd64
+CSVLoggerWithLR:
+    value: true
+CastToTensor:
+    value: true
+DoThingsAfterBatch:
+    value: true
+GradientAccumulation:
+    value:
+        n_acc: 1
+GradientClip:
+    value:
+        max_norm: 0.02
+        norm_type: 2
+Learner:
+    value:
+        _name: <fastai.learner.Learner object at 0x000001EE330993F0>
+        arch: torchvision.models.resnet.resnet34
+        default_cbs: true
+        loss_func:
+            _name: FlattenedLoss of CrossEntropyLoss()
+            axis: 1
+            flatten: true
+            floatify: false
+            is_2d: true
+        lr: 0.001
+        metrics: __main__.basic_traininFastai2.get_basic_training.<locals>.valid_accuracy
+        model_dir: C:\thesis\logs_and_models\dataset_unet_resnet34\unet_resnet34_rgb\models
+        moms:
+            - 0.95
+            - 0.85
+            - 0.95
+        n_in: 3
+        n_out: 11
+        normalize: true
+        opt_func: fastai.optimizer.Adam
+        path: C:\thesis\logs_and_models\dataset_unet_resnet34\unet_resnet34_rgb\logs
+        pretrained: true
+        splitter: fastai.vision.learner._resnet_split
+        train_bn: true
+        wd: 0.01
+        wd_bn_bias: false
+ParamScheduler:
+    value: true
+ProgressCallback:
+    value: true
+Recorder:
+    value:
+        add_time: true
+        train_metrics: false
+        valid_metrics: true
+SaveModelCallback:
+    value:
+        at_end: false
+        every_epoch: true
+        fname: unet_resnet34_rgb
+        with_opt: true
+TrainEvalCallback:
+    value: true
+WandbCallback:
+    value:
+        dataset_name: null
+        log: null
+        log_dataset: false
+        log_model: false
+        log_preds: false
+        log_preds_every_epoch: false
+        model_name: null
+        n_preds: 36
+        reorder: true
+        seed: 12345
+        valid_dl: null
+batch per epoch:
+    value: 4822
+batch size:
+    value: 4
+batch_size:
+    value: "4"
+channels:
+    value: '[[0, 1, 2]]'
+class_weights:
+    value: "False"
+dataset.tfms:
+    value: '[Pipeline: partial, Pipeline: partial -> PILBase.create]'
+datatypes:
+    value: '[''rgb'']'
+dev_mode:
+    value: "False"
+device:
+    value: cuda
+dls.after_batch:
+    value: |
+        Pipeline: IntToFloatTensor -- {'div': 255.0, 'div_mask': 1}
+         -> Normalize -- {'mean': tensor([[[[0.4850]],
+
+                 [[0.4560]],
+
+                 [[0.4060]]]], device='cuda:0'), 'std': tensor([[[[0.2290]],
+
+                 [[0.2240]],
+
+                 [[0.2250]]]], device='cuda:0'), 'axes': (0, 2, 3)}
+dls.after_item:
+    value: 'Pipeline: AddMaskCodes -> SegmentationAlbumentationsTransformTRanspose -> SegmentationAlbumentationsTransformSHIFTSCALEROTATE -> SegmentationAlbumentationsTransformGaussNoise -> SegmentationAlbumentationsHorizontalFlip -> SegmentationAlbumentationsVerticalFlip -> ToTensor'
+dls.before_batch:
+    value: 'Pipeline: '
+droppable_channels:
+    value: '[]'
+epochs:
+    value: "10"
+experiment_root:
+    value: ..\logs_and_models\dataset_unet_resnet34
+extra_labels:
+    value: None
+freeze:
+    value: "False"
+frozen:
+    value: false
+frozen idx:
+    value: 0
+gradient_clip:
+    value: "0.02"
+ignore_index:
+    value: "0"
+im_type:
+    value: .tif
+input 1 dim 1:
+    value: 4
+input 1 dim 2:
+    value: 3
+input 1 dim 3:
+    value: 1000
+input 1 dim 4:
+    value: 1000
+job_name:
+    value: unet_resnet34_rgb
+label_image_type:
+    value: .tif
+last_epoch:
+    value: "False"
+log_folder:
+    value: C:\thesis\logs_and_models\dataset_unet_resnet34\unet_resnet34_rgb\logs
+loss_function:
+    value: cross_entropy
+lr:
+    value: "0.002"
+means:
+    value: '[0.485, 0.456, 0.406]'
+model:
+    value: <function resnet34 at 0x000001EE2A833910>
+model parameters:
+    value: 41222068
+model_folder:
+    value: C:\thesis\logs_and_models\dataset_unet_resnet34\unet_resnet34_rgb\models
+model_to_load:
+    value: "False"
+n_acc:
+    value: "1"
+n_inp:
+    value: 1
+num_workers:
+    value: "8"
+path_to_all_txt:
+    value: ..\multi_channel_dataset_creation\example_dataset\data\all.txt
+path_to_codes:
+    value: ..\multi_channel_dataset_creation\example_dataset\labels\codes.txt
+path_to_dataset:
+    value: ..\multi_channel_dataset_creation\example_dataset
+path_to_images:
+    value: ..\multi_channel_dataset_creation\example_dataset\data\splitted\rgb
+path_to_labels:
+    value: ..\multi_channel_dataset_creation\example_dataset\labels\splitted_labels
+path_to_valid_txt:
+    value: ..\multi_channel_dataset_creation\example_dataset\data\valid.txt
+pin_memory:
+    value: "False"
+prefetch_factor:
+    value: "2"
+save_on_batch_iter_modulus_n:
+    value: "10000"
+sceduler:
+    value: fit_one_cycle
+stds:
+    value: '[0.229, 0.224, 0.225]'
+to_fp16:
+    value: "False"
+transforms:
+    value: '[''Transpose'', ''ShiftScaleRotate'', ''GaussNoise'', ''HorizontalFlip'', ''VerticalFlip'']'
+use_wandb:
+    value: "True"
+wandb_project:
+    value: sdfi-segmentation

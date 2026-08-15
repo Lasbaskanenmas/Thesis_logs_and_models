@@ -1,0 +1,6 @@
+epoch,train_loss,valid_loss,valid_accuracy,time
+epoch,train_loss,valid_loss,valid_accuracy,time
+epoch,train_loss,valid_loss,valid_accuracy,time
+0,0.354453980922699,0.5384023189544678,0.8220282793045044,49:52
+epoch,train_loss,valid_loss,valid_accuracy,time,lr_0,lr_1,lr_2
+0,0.354453980922699,0.5384023189544678,0.8220282793045044,49:52,0.0007431058145929008,0.0007431058145929008,0.0007431058145929008

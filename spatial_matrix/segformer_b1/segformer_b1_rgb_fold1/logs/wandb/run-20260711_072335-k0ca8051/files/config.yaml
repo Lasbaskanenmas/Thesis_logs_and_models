@@ -1,0 +1,154 @@
+_wandb:
+    value:
+        cli_version: 0.27.0
+        e:
+            a9ia08ovpb2bbagjkxlzd2lqvtza9a41:
+                args:
+                    - --config
+                    - configs/matrix_configs/infer/infer_segformer_b1_rgb_fold1.ini
+                codePath: src\ML_sdfi_fastai2\infer.py
+                codePathLocal: src\ML_sdfi_fastai2\infer.py
+                cpu_count: 64
+                cpu_count_logical: 64
+                cudaVersion: "13.0"
+                disk:
+                    /:
+                        total: "10994469302272"
+                        used: "4238543683584"
+                email: last24ag@student.cbs.dk
+                executable: C:\thesis\envs\ML_sdfi\python.exe
+                gpu: GRID A100-40C
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ampere
+                      cudaCores: 6912
+                      memoryTotal: "42949672960"
+                      name: GRID A100-40C
+                      uuid: GPU-0877e7dc-2e4b-11b2-a5c4-d667e41cc6e3
+                host: H6-GPU-WIN-03
+                memory:
+                    total: "137437933568"
+                os: Windows-10-10.0.17763-SP0
+                program: C:\thesis\ML_sdfi_fastai2\src\ML_sdfi_fastai2\infer.py
+                python: CPython 3.10.20
+                root: ..\logs_and_models\spatial_matrix\segformer_b1\segformer_b1_rgb_fold1\logs
+                startedAt: "2026-07-11T14:23:35.252150Z"
+                writerId: a9ia08ovpb2bbagjkxlzd2lqvtza9a41
+        m: []
+        python_version: 3.10.20
+        t:
+            "1":
+                - 1
+                - 4
+                - 5
+                - 41
+                - 49
+                - 53
+                - 63
+                - 80
+            "2":
+                - 1
+                - 4
+                - 5
+                - 11
+                - 41
+                - 49
+                - 53
+                - 63
+                - 80
+            "3":
+                - 2
+                - 13
+                - 16
+            "4": 3.10.20
+            "5": 0.27.0
+            "8":
+                - 3
+            "12": 0.27.0
+            "13": windows-amd64
+batch_size:
+    value: "4"
+benchmark_folder:
+    value: ..\multi_channel_dataset_creation\example_dataset\data\splitted
+channels:
+    value: '[[0, 1, 2]]'
+crop_size:
+    value: "False"
+cudnn_benchmark:
+    value: "True"
+datatypes:
+    value: '[''rgb'']'
+dev_mode:
+    value: "False"
+droppable_channels:
+    value: '[]'
+experiment_root:
+    value: ..\logs_and_models\spatial_matrix\segformer_b1
+extra_labels:
+    value: None
+ignore_index:
+    value: "0"
+im_type:
+    value: .tif
+job_name:
+    value: infer_segformer_b1_rgb_fold1
+label_image_type:
+    value: .tif
+log_folder:
+    value: ..\logs_and_models\spatial_matrix\segformer_b1\segformer_b1_rgb_fold1\logs
+means:
+    value: '[0.485, 0.456, 0.406]'
+model:
+    value: segformer-b1
+model_folder:
+    value: C:\thesis\logs_and_models\spatial_matrix\segformer_b1\segformer_b1_rgb_fold1\models
+model_to_load:
+    value: ..\logs_and_models\spatial_matrix\segformer_b1\segformer_b1_rgb_fold1\models\segformer_b1_rgb_fold1.pth
+num_workers:
+    value: "4"
+output_folder:
+    value: ..\logs_and_models\spatial_matrix\segformer_b1\segformer_b1_rgb_fold1\models\example_dataset
+path_to_all_benchmarkset_txt:
+    value: ..\logs_and_models\route_class_audit\fold_1_valid.txt
+path_to_all_txt:
+    value: ..\logs_and_models\route_class_audit\fold_1_valid.txt
+path_to_codes:
+    value: ..\multi_channel_dataset_creation\example_dataset\labels\codes.txt
+path_to_dataset:
+    value: ..\multi_channel_dataset_creation\example_dataset
+path_to_images:
+    value: ..\multi_channel_dataset_creation\example_dataset\data\splitted\rgb
+path_to_labels:
+    value: ..\multi_channel_dataset_creation\example_dataset\labels\splitted_labels
+path_to_valid_txt:
+    value: "False"
+pin_memory:
+    value: "True"
+prefetch_factor:
+    value: "2"
+save_preds:
+    value: "True"
+save_probs:
+    value: "False"
+save_workers:
+    value: "2"
+saved_probs_format:
+    value: uint8
+sceduler:
+    value: fit_one_cycle
+show:
+    value: "False"
+stds:
+    value: '[0.229, 0.224, 0.225]'
+tf32:
+    value: "False"
+to_bf16:
+    value: "True"
+to_fp16:
+    value: "False"
+transforms:
+    value: '[]'
+use_wandb:
+    value: "True"
+wandb_project:
+    value: thesis spatial matrix

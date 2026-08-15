@@ -1,0 +1,40 @@
+{
+  "os": "Windows-10-10.0.17763-SP0",
+  "python": "CPython 3.10.20",
+  "startedAt": "2026-07-23T02:14:37.183045Z",
+  "args": [
+    "--config",
+    "configs/matrix_configs/train/swin_upernet_6ch_fold0_unw.ini"
+  ],
+  "program": "C:\\thesis\\ML_sdfi_fastai2\\src\\ML_sdfi_fastai2\\train.py",
+  "codePath": "src\\ML_sdfi_fastai2\\train.py",
+  "codePathLocal": "src\\ML_sdfi_fastai2\\train.py",
+  "email": "last24ag@student.cbs.dk",
+  "root": "C:\\thesis\\logs_and_models\\spatial_matrix\\swin_upernet\\swin_upernet_6ch_fold0_unw\\logs",
+  "host": "H6-GPU-WIN-03",
+  "executable": "C:\\thesis\\envs\\ML_sdfi\\python.exe",
+  "cpu_count": 64,
+  "cpu_count_logical": 64,
+  "gpu": "GRID A100-40C",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "10994469302272",
+      "used": "4671078461440"
+    }
+  },
+  "memory": {
+    "total": "137437933568"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "GRID A100-40C",
+      "memoryTotal": "42949672960",
+      "cudaCores": 6912,
+      "architecture": "Ampere",
+      "uuid": "GPU-0877e7dc-2e4b-11b2-a5c4-d667e41cc6e3"
+    }
+  ],
+  "cudaVersion": "13.0",
+  "writerId": "v72wmtzu08iou8i1ljlgaqx21seth9ti"
+}

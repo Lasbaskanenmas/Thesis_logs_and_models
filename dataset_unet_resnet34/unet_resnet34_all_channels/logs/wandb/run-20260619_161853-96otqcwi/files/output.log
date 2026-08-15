@@ -1,0 +1,45 @@
+####################
+classifying in totall : 19316 nr of images
+segmentation images are saved to: ..\logs_and_models\dataset_unet_resnet34\unet_resnet34_all_channels_bf16\models\example_dataset
+{'model': <function resnet34 at 0x000001ACCBC3D240>, 'dev_mode': False, 'model_to_load': Path('../logs_and_models/dataset_unet_resnet34/unet_resnet34_all_channels/models/unet_resnet34_all_channels_bf16.pth'), 'datatypes': ['rgb', 'cir', 'OrtoRGB', 'OrtoCIR', 'DSM', 'DTM'], 'channels': [[0, 1, 2], [0], [0, 1, 2], [0], [0], [0]], 'means': [0.485, 0.456, 0.406, 0.40779021, 0.485, 0.456, 0.406, 0.40779021, 0.5, 0.5], 'stds': [0.229, 0.224, 0.225, 0.15176421, 0.229, 0.224, 0.225, 0.15176421, 1.0, 1.0], 'ignore_index': 0, 'batch_size': 4, 'to_fp16': False, 'to_bf16': True, 'tf32': True, 'cudnn_benchmark': True, 'pin_memory': True, 'prefetch_factor': 2, 'num_workers': 4, 'save_workers': 2, 'transforms': [], 'im_type': '.tif', 'label_image_type': '.tif', 'extra_labels': 'None', 'show': False, 'droppable_channels': [], 'save_probs': False, 'save_preds': True, 'saved_probs_format': 'uint8', 'crop_size': False, 'use_wandb': True, 'wandb_project': 'thesis results', 'benchmark_folder': Path('../multi_channel_dataset_creation/example_dataset/data/splitted'), 'path_to_images': Path('../multi_channel_dataset_creation/example_dataset/data/splitted/rgb'), 'path_to_labels': Path('../multi_channel_dataset_creation/example_dataset/labels/splitted_labels'), 'path_to_dataset': Path('../multi_channel_dataset_creation/example_dataset'), 'path_to_all_benchmarkset_txt': Path('../multi_channel_dataset_creation/example_dataset/data/all.txt'), 'output_folder': Path('../logs_and_models/dataset_unet_resnet34/unet_resnet34_all_channels_bf16/models/example_dataset'), 'path_to_codes': Path('../multi_channel_dataset_creation/example_dataset/labels/codes.txt'), 'experiment_root': Path('../logs_and_models/dataset_unet_resnet34'), 'job_name': 'infer_unet_resnet34_all_channels_bf16', 'path_to_all_txt': Path('../multi_channel_dataset_creation/example_dataset/data/all.txt'), 'path_to_valid_txt': False, 'model_folder': Path('C:/thesis/logs_and_models/dataset_unet_resnet34/unet_resnet34_all_channels/models'), 'log_folder': Path('../logs_and_models/dataset_unet_resnet34/unet_resnet34_all_channels/logs'), 'sceduler': 'fit_one_cycle'}
+ codes: ['unknown' 'asfalt' 'fliser' 'grus' 'ubefestet' 'green_roof' 'drivhus'
+ 'betonflade' 'brosten' 'unknown2' 'solceller']
+using pin_memory ########################################################################
+experiment_settings_dict['prefetch_factor']: 2
+Using CrossEntropyLoss with ignore_index=0
+Building fastai UNet
+training with bf16 mixed precision
+ |----------------------------------------------------------------------------------------------------| 0.00% [0/4829 00:00<?]
+Process Process-3:
+Traceback (most recent call last):
+  File "C:\thesis\envs\ML_sdfi\lib\multiprocessing\process.py", line 314, in _bootstrap
+    self.run()
+  File "C:\thesis\envs\ML_sdfi\lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\thesis\ML_sdfi_fastai2\src\ML_sdfi_fastai2\infer.py", line 376, in infer_all
+    infer_with_get_preds_on_all(training,all_files)
+  File "C:\thesis\ML_sdfi_fastai2\src\ML_sdfi_fastai2\infer.py", line 244, in infer_with_get_preds_on_all
+    training.learn.validate(dl=dl)
+  File "C:\thesis\envs\ML_sdfi\lib\site-packages\fastai\learner.py", line 286, in validate
+    with self.validation_context(cbs=cbs): self._do_epoch_validate(ds_idx, dl)
+  File "C:\thesis\envs\ML_sdfi\lib\site-packages\fastai\learner.py", line 252, in _do_epoch_validate
+    with torch.no_grad(): self._with_events(self.all_batches, 'validate', CancelValidException)
+  File "C:\thesis\envs\ML_sdfi\lib\site-packages\fastai\learner.py", line 207, in _with_events
+    try: self(f'before_{event_type}');  f()
+  File "C:\thesis\envs\ML_sdfi\lib\site-packages\fastai\learner.py", line 213, in all_batches
+    for o in enumerate(self.dl): self.one_batch(*o)
+  File "C:\thesis\envs\ML_sdfi\lib\site-packages\fastai\data\load.py", line 130, in __iter__
+    for b in _loaders[self.fake_l.num_workers==0](self.fake_l):
+  File "C:\thesis\envs\ML_sdfi\lib\site-packages\torch\utils\data\dataloader.py", line 708, in __next__
+    data = self._next_data()
+  File "C:\thesis\envs\ML_sdfi\lib\site-packages\torch\utils\data\dataloader.py", line 1458, in _next_data
+    idx, data = self._get_data()
+  File "C:\thesis\envs\ML_sdfi\lib\site-packages\torch\utils\data\dataloader.py", line 1410, in _get_data
+    success, data = self._try_get_data()
+  File "C:\thesis\envs\ML_sdfi\lib\site-packages\torch\utils\data\dataloader.py", line 1251, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "C:\thesis\envs\ML_sdfi\lib\queue.py", line 180, in get
+    self.not_empty.wait(remaining)
+  File "C:\thesis\envs\ML_sdfi\lib\threading.py", line 324, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt

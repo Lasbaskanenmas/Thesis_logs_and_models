@@ -1,0 +1,2 @@
+error_rate;iou_unknown;iou_asfalt;iou_fliser;iou_grus;iou_ubefestet;iou_green_roof;iou_drivhus;iou_betonflade;iou_brosten;iou_unknown2;iou_solceller;subset
+0.15511514170646507;0.0;0.0;0.0;0.021154593754049475;0.5951975699608703;0.0;0.0;0.0;0.0;0.0;0.0;..\multi_channel_dataset_creation\example_dataset\data\valid.txt

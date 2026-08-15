@@ -1,0 +1,298 @@
+_wandb:
+    value:
+        cli_version: 0.27.0
+        e:
+            gg23tqm7sw3fxuedj98cpybe1ntb4a58:
+                args:
+                    - --config
+                    - configs/matrix_configs/train/unet_resnet34_10ch_fold1_unw.ini
+                codePath: src\ML_sdfi_fastai2\segformer_train.py
+                codePathLocal: src\ML_sdfi_fastai2\segformer_train.py
+                cpu_count: 64
+                cpu_count_logical: 64
+                cudaVersion: "13.0"
+                disk:
+                    /:
+                        total: "10994469302272"
+                        used: "4445519589376"
+                email: last24ag@student.cbs.dk
+                executable: C:\thesis\envs\ML_sdfi\python.exe
+                gpu: GRID A100-40C
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ampere
+                      cudaCores: 6912
+                      memoryTotal: "42949672960"
+                      name: GRID A100-40C
+                      uuid: GPU-0877e7dc-2e4b-11b2-a5c4-d667e41cc6e3
+                host: H6-GPU-WIN-03
+                memory:
+                    total: "137437933568"
+                os: Windows-10-10.0.17763-SP0
+                program: C:\thesis\ML_sdfi_fastai2\src\ML_sdfi_fastai2\segformer_train.py
+                python: CPython 3.10.20
+                root: C:\thesis\logs_and_models\spatial_matrix\unet_resnet34\unet_resnet34_10ch_fold1_unw\logs
+                startedAt: "2026-07-14T05:48:09.728505Z"
+                writerId: gg23tqm7sw3fxuedj98cpybe1ntb4a58
+        m: []
+        python_version: 3.10.20
+        t:
+            "1":
+                - 1
+                - 4
+                - 5
+                - 41
+                - 49
+                - 53
+                - 63
+                - 80
+            "2":
+                - 1
+                - 4
+                - 5
+                - 41
+                - 49
+                - 53
+                - 63
+                - 80
+            "3":
+                - 2
+                - 13
+                - 16
+                - 61
+            "4": 3.10.20
+            "5": 0.27.0
+            "8":
+                - 3
+            "12": 0.27.0
+            "13": windows-amd64
+CSVLoggerWithLR:
+    value: true
+CastToTensor:
+    value: true
+DoThingsAfterBatch:
+    value: true
+GradientAccumulation:
+    value:
+        n_acc: 1
+GradientClip:
+    value:
+        max_norm: 0.02
+        norm_type: 2
+Learner:
+    value:
+        _name: <fastai.learner.Learner object at 0x000002B867E59ED0>
+        arch: torchvision.models.resnet.resnet34
+        default_cbs: true
+        loss_func:
+            _name: FlattenedLoss of CrossEntropyLoss()
+            axis: 1
+            flatten: true
+            floatify: false
+            is_2d: true
+        lr: 0.001
+        metrics: __main__.basic_traininFastai2.get_basic_training.<locals>.valid_accuracy
+        model_dir: C:\thesis\logs_and_models\spatial_matrix\unet_resnet34\unet_resnet34_10ch_fold1_unw\models
+        moms:
+            - 0.95
+            - 0.85
+            - 0.95
+        n_in: 10
+        n_out: 11
+        normalize: true
+        opt_func: fastai.optimizer.Adam
+        path: C:\thesis\logs_and_models\spatial_matrix\unet_resnet34\unet_resnet34_10ch_fold1_unw\logs
+        pretrained: true
+        splitter: fastai.vision.learner._resnet_split
+        train_bn: true
+        wd: 0.01
+        wd_bn_bias: false
+MixedPrecision:
+    value:
+        amp_mode: BF16
+ParamScheduler:
+    value: true
+ProgressCallback:
+    value: true
+Recorder:
+    value:
+        add_time: true
+        train_metrics: false
+        valid_metrics: true
+SaveModelCallback:
+    value:
+        at_end: false
+        every_epoch: true
+        fname: unet_resnet34_10ch_fold1_unw
+        with_opt: true
+TrainEvalCallback:
+    value: true
+WandbCallback:
+    value:
+        dataset_name: null
+        log: null
+        log_dataset: false
+        log_model: false
+        log_preds: false
+        log_preds_every_epoch: false
+        model_name: null
+        n_preds: 36
+        reorder: true
+        seed: 12345
+        valid_dl: null
+batch per epoch:
+    value: 3219
+batch size:
+    value: 4
+batch_size:
+    value: "4"
+channels:
+    value: '[[0, 1, 2], [0], [0, 1, 2], [0], [0], [0]]'
+class_weights:
+    value: "False"
+cudnn_benchmark:
+    value: "True"
+dataset.tfms:
+    value: '[Pipeline: partial, Pipeline: partial -> PILBase.create]'
+datatypes:
+    value: '[''rgb'', ''cir'', ''OrtoRGB'', ''OrtoCIR'', ''DSM'', ''DTM'']'
+dev_mode:
+    value: "False"
+device:
+    value: cuda
+dls.after_batch:
+    value: |
+        Pipeline: IntToFloatTensor -- {'div': 255.0, 'div_mask': 1}
+         -> Normalize -- {'mean': tensor([[[[0.4850]],
+
+                 [[0.4560]],
+
+                 [[0.4060]],
+
+                 [[0.4078]],
+
+                 [[0.4850]],
+
+                 [[0.4560]],
+
+                 [[0.4060]],
+
+                 [[0.4078]],
+
+                 [[0.5000]],
+
+                 [[0.5000]]]], device='cuda:0'), 'std': tensor([[[[0.2290]],
+
+                 [[0.2240]],
+
+                 [[0.2250]],
+
+                 [[0.1518]],
+
+                 [[0.2290]],
+
+                 [[0.2240]],
+
+                 [[0.2250]],
+
+                 [[0.1518]],
+
+                 [[1.0000]],
+
+                 [[1.0000]]]], device='cuda:0'), 'axes': (0, 2, 3)}
+dls.after_item:
+    value: 'Pipeline: AddMaskCodes -> SegmentationAlbumentationsTransformTRanspose -> SegmentationAlbumentationsTransformSHIFTSCALEROTATE -> SegmentationAlbumentationsTransformGaussNoise -> SegmentationAlbumentationsHorizontalFlip -> SegmentationAlbumentationsVerticalFlip -> ToTensor'
+dls.before_batch:
+    value: 'Pipeline: '
+droppable_channels:
+    value: '[]'
+epochs:
+    value: "10"
+experiment_root:
+    value: ..\logs_and_models\spatial_matrix\unet_resnet34
+extra_labels:
+    value: None
+freeze:
+    value: "False"
+frozen:
+    value: false
+frozen idx:
+    value: 0
+gradient_clip:
+    value: "0.02"
+ignore_index:
+    value: "0"
+im_type:
+    value: .tif
+input 1 dim 1:
+    value: 4
+input 1 dim 2:
+    value: 10
+input 1 dim 3:
+    value: 1000
+input 1 dim 4:
+    value: 1000
+job_name:
+    value: unet_resnet34_10ch_fold1_unw
+label_image_type:
+    value: .tif
+last_epoch:
+    value: "False"
+log_folder:
+    value: C:\thesis\logs_and_models\spatial_matrix\unet_resnet34\unet_resnet34_10ch_fold1_unw\logs
+loss_function:
+    value: cross_entropy
+lr:
+    value: "0.002"
+means:
+    value: '[0.485, 0.456, 0.406, 0.40779021, 0.485, 0.456, 0.406, 0.40779021, 0.5, 0.5]'
+model:
+    value: <function resnet34 at 0x000002B85F817BE0>
+model parameters:
+    value: 41269941
+model_folder:
+    value: C:\thesis\logs_and_models\spatial_matrix\unet_resnet34\unet_resnet34_10ch_fold1_unw\models
+model_to_load:
+    value: "False"
+n_acc:
+    value: "1"
+n_inp:
+    value: 1
+num_workers:
+    value: "4"
+path_to_all_txt:
+    value: ..\multi_channel_dataset_creation\example_dataset\data\all.txt
+path_to_codes:
+    value: ..\multi_channel_dataset_creation\example_dataset\labels\codes.txt
+path_to_dataset:
+    value: ..\multi_channel_dataset_creation\example_dataset
+path_to_images:
+    value: ..\multi_channel_dataset_creation\example_dataset\data\splitted\rgb
+path_to_labels:
+    value: ..\multi_channel_dataset_creation\example_dataset\labels\splitted_labels
+path_to_valid_txt:
+    value: ..\logs_and_models\route_class_audit\fold_1_valid.txt
+pin_memory:
+    value: "True"
+prefetch_factor:
+    value: "2"
+pretrained:
+    value: "True"
+save_on_batch_iter_modulus_n:
+    value: "10000"
+sceduler:
+    value: fit_one_cycle
+stds:
+    value: '[0.229, 0.224, 0.225, 0.15176421, 0.229, 0.224, 0.225, 0.15176421, 1.0, 1.0]'
+tf32:
+    value: "False"
+to_bf16:
+    value: "True"
+to_fp16:
+    value: "False"
+transforms:
+    value: '[''Transpose'', ''ShiftScaleRotate'', ''GaussNoise'', ''HorizontalFlip'', ''VerticalFlip'']'
+use_wandb:
+    value: "True"
+wandb_project:
+    value: thesis spatial matrix

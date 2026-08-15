@@ -1,0 +1,77 @@
+folds: {'84-40': '0', '83-31': '0', '85-48': '0', '83-25': '1', '82-11': '1', '82-13': '1', '82-21': '1', '83-34': '1', '82-24': '2', '82-22': '2', '83-26': '2', '82-20': '2', '82-19': '2', '85-45': '2', '82-16': '2', '84-41': '2'}
+all.txt entries (non-blank): 19318  unique: 19318
+duplicate entries in all.txt: 0  e.g. []
+tiles parsed: 19314  unparseable: 4 ['#O2021_82_13_1_0024_00141735_7000_0.tif', '#O2021_82_13_1_0024_00141802_8150_2000.tif', '#O2021_82_13_1_0025_00144229_8160_1000.tif', '#O2021_82_22_1_0031_00000390_8000_1000.tif']
+distinct parents referenced: 757
+distinct route keys        : ['82-11', '82-13', '82-16', '82-19', '82-20', '82-21', '82-22', '82-24', '83-25', '83-26', '83-31', '83-34', '84-40', '84-41', '85-45', '85-48']
+routes in all.txt not in fold_assignment: []
+routes in fold_assignment not in all.txt: []
+tiles per route: {'82-11': 1441, '82-13': 1043, '82-16': 378, '82-19': 591, '82-20': 608, '82-21': 313, '82-22': 1360, '82-24': 1529, '83-25': 3630, '83-26': 1228, '83-31': 1020, '83-34': 10, '84-40': 5269, '84-41': 343, '85-45': 401, '85-48': 150}
+tiles per fold : {'0': 6439, '1': 6437, '2': 6438}
+tiles per parent: min=1 med=18 max=127
+
+reading tile geotransforms from splitted/rgb ...
+   ...4000/19314
+   ...8000/19314
+   ...12000/19314
+   ...16000/19314
+  read ok 19314  failed 0  e.g. []
+  tile dimensions : [((1000, 1000), 19314)]
+  tile pixel sizes: [((0.1, -0.1), 19314)]
+  tile CRS        : [(25832, 19314)]
+  tile area m2    : min=10000 med=10000 max=10000
+
+CORRECTION D check: does the name offset match the real crop origin?
+  tiles checked 19314, name-offset disagrees with geotransform: 2386 (12.35%)
+     ('O2021_82_11_1_0023_00003029_0_7000.tif', 0.0, -60.0)
+     ('O2021_82_11_1_0023_00003029_10000_7000.tif', 0.0, -60.0)
+     ('O2021_82_11_1_0023_00003029_1000_7000.tif', 0.0, -60.0)
+     ('O2021_82_11_1_0023_00003029_10960_7000.tif', 0.0, -60.0)
+     ('O2021_82_11_1_0023_00003029_11000_0.tif', 4.0, 0.0)
+     ('O2021_82_11_1_0023_00003029_2000_7000.tif', 0.0, -60.0)
+     ('O2021_82_11_1_0023_00003029_3000_7000.tif', 0.0, -60.0)
+     ('O2021_82_11_1_0023_00003029_4000_7000.tif', 0.0, -60.0)
+
+TASK 4b  unique labelled ground area
+  naive sum of tile areas : 193.14 km2
+  unique labelled area    : 75.45 km2
+  redundancy factor       : 2.560
+  per route:
+   82-11    tiles= 1441 naive=  14.41 km2  unique=   8.05 km2  redundancy=1.791
+   82-13    tiles= 1043 naive=  10.43 km2  unique=   6.08 km2  redundancy=1.715
+   82-16    tiles=  378 naive=   3.78 km2  unique=   2.33 km2  redundancy=1.621
+   82-19    tiles=  591 naive=   5.91 km2  unique=   2.26 km2  redundancy=2.618
+   82-20    tiles=  608 naive=   6.08 km2  unique=   2.49 km2  redundancy=2.439
+   82-21    tiles=  313 naive=   3.13 km2  unique=   1.84 km2  redundancy=1.697
+   82-22    tiles= 1360 naive=  13.60 km2  unique=   2.49 km2  redundancy=5.469
+   82-24    tiles= 1529 naive=  15.29 km2  unique=   5.28 km2  redundancy=2.898
+   83-25    tiles= 3630 naive=  36.30 km2  unique=  13.87 km2  redundancy=2.618
+   83-26    tiles= 1228 naive=  12.28 km2  unique=   7.19 km2  redundancy=1.707
+   83-31    tiles= 1020 naive=  10.20 km2  unique=   6.79 km2  redundancy=1.502
+   83-34    tiles=   10 naive=   0.10 km2  unique=   0.07 km2  redundancy=1.538
+   84-40    tiles= 5269 naive=  52.69 km2  unique=  17.35 km2  redundancy=3.038
+   84-41    tiles=  343 naive=   3.43 km2  unique=   1.57 km2  redundancy=2.184
+   85-45    tiles=  401 naive=   4.01 km2  unique=   0.75 km2  redundancy=5.347
+   85-48    tiles=  150 naive=   1.50 km2  unique=   0.30 km2  redundancy=5.074
+
+TASK 5b  tile-level overlap between DIFFERENT routes / DIFFERENT folds
+   ...5000/19314
+   ...10000/19314
+   ...15000/19314
+  overlapping tile pairs, SAME route : 90636  (sum ovl 268.08 km2)
+  overlapping tile pairs, DIFF route : 8120
+  overlapping tile pairs, DIFF FOLD  : 6783   <<<< the one that matters
+   82-20 x 82-21    tile_pairs=  3286 sum_ovl_km2=   8.165 folds=2/1 SAME_FOLD=False
+   85-45 x 85-48    tile_pairs=  3019 sum_ovl_km2=   8.938 folds=2/0 SAME_FOLD=False
+   82-16 x 82-24    tile_pairs=  1337 sum_ovl_km2=   3.572 folds=2/2 SAME_FOLD=True
+   84-40 x 84-41    tile_pairs=   478 sum_ovl_km2=   1.261 folds=0/2 SAME_FOLD=False
+  deduplicated shared area between route pairs (tile footprints):
+   82-16 x 82-24    shared=  0.928 km2 (39.78% of 82-16, 17.58% of 82-24) folds=2/2
+   82-20 x 82-21    shared=  1.840 km2 (73.81% of 82-20, 99.76% of 82-21) folds=2/1
+   84-40 x 84-41    shared=  0.199 km2 ( 1.15% of 84-40, 12.66% of 84-41) folds=0/2
+   85-45 x 85-48    shared=  0.279 km2 (37.20% of 85-45, 94.37% of 85-48) folds=2/0
+  deduplicated shared area between FOLDS (tile footprints):
+   fold 0 (24.43 km2) x fold 1 (29.90 km2): shared 0.0000 km2 = 0.000% / 0.000%
+   fold 0 (24.43 km2) x fold 2 (23.43 km2): shared 0.4779 km2 = 1.956% / 2.039%
+   fold 1 (29.90 km2) x fold 2 (23.43 km2): shared 1.8397 km2 = 6.153% / 7.851%
+  wrote C:\thesis\logs_and_models\filename_provenance\cross_route_tile_overlaps.csv

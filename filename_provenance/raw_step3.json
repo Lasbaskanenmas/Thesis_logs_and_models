@@ -1,0 +1,139 @@
+{
+ "tiles": {
+  "n": 19314,
+  "dims": "[((1000, 1000), 19314)]",
+  "naive_area_km2": 193.14
+ },
+ "name_offset_mismatch": {
+  "checked": 19314,
+  "mismatch": 2386
+ },
+ "labelled_area": {
+  "naive_km2": 193.14,
+  "unique_km2": 75.44711,
+  "redundancy": 2.559939008929567,
+  "per_route": {
+   "82-11": {
+    "tiles": 1441,
+    "unique_km2": 8.046433
+   },
+   "82-13": {
+    "tiles": 1043,
+    "unique_km2": 6.080201
+   },
+   "82-16": {
+    "tiles": 378,
+    "unique_km2": 2.332058
+   },
+   "82-19": {
+    "tiles": 591,
+    "unique_km2": 2.257801
+   },
+   "82-20": {
+    "tiles": 608,
+    "unique_km2": 2.492408
+   },
+   "82-21": {
+    "tiles": 313,
+    "unique_km2": 1.844192
+   },
+   "82-22": {
+    "tiles": 1360,
+    "unique_km2": 2.486528
+   },
+   "82-24": {
+    "tiles": 1529,
+    "unique_km2": 5.276544
+   },
+   "83-25": {
+    "tiles": 3630,
+    "unique_km2": 13.865564
+   },
+   "83-26": {
+    "tiles": 1228,
+    "unique_km2": 7.193737
+   },
+   "83-31": {
+    "tiles": 1020,
+    "unique_km2": 6.788987
+   },
+   "83-34": {
+    "tiles": 10,
+    "unique_km2": 0.065
+   },
+   "84-40": {
+    "tiles": 5269,
+    "unique_km2": 17.346449
+   },
+   "84-41": {
+    "tiles": 343,
+    "unique_km2": 1.570839
+   },
+   "85-45": {
+    "tiles": 401,
+    "unique_km2": 0.749973
+   },
+   "85-48": {
+    "tiles": 150,
+    "unique_km2": 0.295652
+   }
+  }
+ },
+ "tile_cross_route": {
+  "same_route_pairs": 90636,
+  "same_route_km2": 268.08122,
+  "cross_route_pairs": 8120,
+  "cross_fold_pairs": 6783,
+  "per_route_pair": {
+   "82-16|82-24": {
+    "pairs": 1337,
+    "sum_km2": 3.571951,
+    "shared_km2": 0.927682,
+    "fold_a": "2",
+    "fold_b": "2",
+    "same_fold": true
+   },
+   "82-20|82-21": {
+    "pairs": 3286,
+    "sum_km2": 8.16506,
+    "shared_km2": 1.839692,
+    "fold_a": "2",
+    "fold_b": "1",
+    "same_fold": false
+   },
+   "84-40|84-41": {
+    "pairs": 478,
+    "sum_km2": 1.260796,
+    "shared_km2": 0.198868,
+    "fold_a": "0",
+    "fold_b": "2",
+    "same_fold": false
+   },
+   "85-45|85-48": {
+    "pairs": 3019,
+    "sum_km2": 8.938131,
+    "shared_km2": 0.279014,
+    "fold_a": "2",
+    "fold_b": "0",
+    "same_fold": false
+   }
+  }
+ },
+ "fold_shared": {
+  "0|1": {
+   "km2": 0.0,
+   "pct_a": 0.0,
+   "pct_b": 0.0
+  },
+  "0|2": {
+   "km2": 0.477882,
+   "pct_a": 1.9560405987649834,
+   "pct_b": 2.039423859622948
+  },
+  "1|2": {
+   "km2": 1.839692,
+   "pct_a": 6.1525300328847585,
+   "pct_b": 7.851125924720874
+  }
+ }
+}

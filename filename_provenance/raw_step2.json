@@ -1,0 +1,237 @@
+{
+ "frame_footprint": {
+  "width_m": [
+   770.0,
+   970.0,
+   1821.0
+  ],
+  "height_m": [
+   318.0,
+   715.0,
+   1245.0
+  ],
+  "area_km2_sum": 933.840289,
+  "n_distinct_sizes": 425
+ },
+ "between_strip": {
+  "n_adjacent": 109,
+  "adj_mean_pct": 22.086793292733912,
+  "adj_median_pct": 21.6169924690802,
+  "adj_frac_gt0": 0.9908256880733946,
+  "n_nonadjacent_overlapping": 19
+ },
+ "parent_union": {
+  "naive_km2": 933.840289,
+  "unique_km2": 374.028984,
+  "redundancy": 2.4967056804346477,
+  "per_route": {
+   "82-11": {
+    "frames": 23,
+    "naive_km2": 15.382393,
+    "unique_km2": 9.785541
+   },
+   "82-13": {
+    "frames": 34,
+    "naive_km2": 14.525927,
+    "unique_km2": 10.156826
+   },
+   "82-16": {
+    "frames": 16,
+    "naive_km2": 5.293697,
+    "unique_km2": 4.061822
+   },
+   "82-19": {
+    "frames": 24,
+    "naive_km2": 18.48,
+    "unique_km2": 8.505783
+   },
+   "82-20": {
+    "frames": 8,
+    "naive_km2": 16.32,
+    "unique_km2": 8.453979
+   },
+   "82-21": {
+    "frames": 9,
+    "naive_km2": 17.68,
+    "unique_km2": 9.380586
+   },
+   "82-22": {
+    "frames": 57,
+    "naive_km2": 35.91,
+    "unique_km2": 8.245977
+   },
+   "82-24": {
+    "frames": 131,
+    "naive_km2": 177.979629,
+    "unique_km2": 82.670866
+   },
+   "83-25": {
+    "frames": 102,
+    "naive_km2": 73.676058,
+    "unique_km2": 36.992423
+   },
+   "83-26": {
+    "frames": 27,
+    "naive_km2": 15.923691,
+    "unique_km2": 12.090802
+   },
+   "83-31": {
+    "frames": 19,
+    "naive_km2": 10.288439,
+    "unique_km2": 7.906667
+   },
+   "83-34": {
+    "frames": 26,
+    "naive_km2": 20.02,
+    "unique_km2": 10.863842
+   },
+   "84-40": {
+    "frames": 532,
+    "naive_km2": 309.517905,
+    "unique_km2": 112.134543
+   },
+   "84-41": {
+    "frames": 156,
+    "naive_km2": 104.924105,
+    "unique_km2": 46.7125
+   },
+   "84-42": {
+    "frames": 17,
+    "naive_km2": 13.09,
+    "unique_km2": 6.506639
+   },
+   "85-45": {
+    "frames": 80,
+    "naive_km2": 57.977926,
+    "unique_km2": 12.257753
+   },
+   "85-48": {
+    "frames": 37,
+    "naive_km2": 26.850519,
+    "unique_km2": 5.841105
+   }
+  }
+ },
+ "cross_route": {
+  "n_pairs": 983,
+  "route_pairs": {
+   "82-16|82-24": {
+    "pairs": 54,
+    "sum_km2": 4.414665,
+    "unique_km2": 2.004428,
+    "fold_a": "2",
+    "fold_b": "2",
+    "same_fold": true
+   },
+   "82-20|82-21": {
+    "pairs": 50,
+    "sum_km2": 25.35904,
+    "unique_km2": 5.531749,
+    "fold_a": "2",
+    "fold_b": "1",
+    "same_fold": false
+   },
+   "84-41|84-42": {
+    "pairs": 99,
+    "sum_km2": 17.988479,
+    "unique_km2": 4.835942,
+    "fold_a": "2",
+    "fold_b": null,
+    "same_fold": false
+   },
+   "84-40|84-41": {
+    "pairs": 69,
+    "sum_km2": 5.149318,
+    "unique_km2": 1.170348,
+    "fold_a": "0",
+    "fold_b": "2",
+    "same_fold": false
+   },
+   "85-45|85-48": {
+    "pairs": 711,
+    "sum_km2": 137.055706,
+    "unique_km2": 4.996203,
+    "fold_a": "2",
+    "fold_b": "0",
+    "same_fold": false
+   }
+  }
+ },
+ "cross_route_fold_straddling": [
+  {
+   "routes": [
+    "85-45",
+    "85-48"
+   ],
+   "pairs": 711,
+   "km2": 137.055706,
+   "fold_a": "2",
+   "fold_b": "0"
+  },
+  {
+   "routes": [
+    "84-41",
+    "84-42"
+   ],
+   "pairs": 99,
+   "km2": 17.988479,
+   "fold_a": "2",
+   "fold_b": "?"
+  },
+  {
+   "routes": [
+    "84-40",
+    "84-41"
+   ],
+   "pairs": 69,
+   "km2": 5.149318,
+   "fold_a": "0",
+   "fold_b": "2"
+  },
+  {
+   "routes": [
+    "82-20",
+    "82-21"
+   ],
+   "pairs": 50,
+   "km2": 25.35904,
+   "fold_a": "2",
+   "fold_b": "1"
+  }
+ ],
+ "cross_year": {
+  "82-24": {
+   "years": [
+    "2021",
+    "2023"
+   ],
+   "a_km2": 11.995403,
+   "b_km2": 74.912886,
+   "shared_km2": 4.237423,
+   "pct_a": 35.32539090183131,
+   "pct_b": 5.6564674333865606
+  },
+  "84-40": {
+   "years": [
+    "2021",
+    "2023"
+   ],
+   "a_km2": 34.302113,
+   "b_km2": 88.951198,
+   "shared_km2": 11.118768,
+   "pct_a": 32.41423640578643,
+   "pct_b": 12.49985188507523
+  },
+  "84-41": {
+   "years": [
+    "2021",
+    "2023"
+   ],
+   "a_km2": 10.08505,
+   "b_km2": 36.62745,
+   "shared_km2": 0.0,
+   "pct_a": 0.0,
+   "pct_b": 0.0
+  }
+ }
+}
