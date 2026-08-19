@@ -1,0 +1,3 @@
+epoch     train_loss  valid_loss  valid_accuracy  time
+0         0.159378    0.723787    0.861822        40:06                                                                            
+Saving model

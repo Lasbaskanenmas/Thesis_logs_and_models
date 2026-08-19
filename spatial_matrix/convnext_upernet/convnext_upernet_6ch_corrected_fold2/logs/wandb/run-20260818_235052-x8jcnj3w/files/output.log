@@ -1,0 +1,25 @@
+####################
+classifying in totall : 6440 nr of images
+segmentation images are saved to: ..\logs_and_models\spatial_matrix\convnext_upernet\convnext_upernet_6ch_corrected_fold2\models\example_dataset
+{'model': 'convnext_base_upernet', 'dev_mode': False, 'model_to_load': Path('../logs_and_models/spatial_matrix/convnext_upernet/convnext_upernet_6ch_corrected_fold2/models/convnext_upernet_6ch_corrected_fold2.pth'), 'datatypes': ['rgb', 'cir', 'DSM', 'DTM'], 'channels': [[0, 1, 2], [0], [0], [0]], 'means': [0.485, 0.456, 0.406, 0.43791982357265985, 0.08524121066459263, 0.07131383041867789], 'stds': [0.229, 0.224, 0.225, 0.2459285315362057, 0.0929699110545978, 0.08554528605670214], 'ignore_index': 0, 'batch_size': 4, 'to_fp16': False, 'to_bf16': True, 'tf32': False, 'cudnn_benchmark': True, 'pin_memory': True, 'prefetch_factor': 2, 'num_workers': 4, 'save_workers': 2, 'transforms': [], 'im_type': '.tif', 'label_image_type': '.tif', 'extra_labels': 'None', 'show': False, 'droppable_channels': [], 'save_probs': False, 'save_preds': True, 'saved_probs_format': 'uint8', 'crop_size': False, 'use_wandb': True, 'wandb_project': 'thesis spatial matrix', 'benchmark_folder': Path('../multi_channel_dataset_creation/example_dataset/data/splitted'), 'path_to_images': Path('../multi_channel_dataset_creation/example_dataset/data/splitted/rgb'), 'path_to_labels': Path('../multi_channel_dataset_creation/example_dataset/labels/splitted_labels'), 'path_to_dataset': Path('../multi_channel_dataset_creation/example_dataset'), 'path_to_all_benchmarkset_txt': Path('../logs_and_models/route_class_audit/fold_2_valid.txt'), 'output_folder': Path('../logs_and_models/spatial_matrix/convnext_upernet/convnext_upernet_6ch_corrected_fold2/models/example_dataset'), 'path_to_codes': Path('../multi_channel_dataset_creation/example_dataset/labels/codes.txt'), 'experiment_root': Path('../logs_and_models/spatial_matrix/convnext_upernet'), 'job_name': 'infer_convnext_upernet_6ch_corrected_fold2', 'path_to_all_txt': Path('../logs_and_models/route_class_audit/fold_2_valid.txt'), 'path_to_valid_txt': False, 'model_folder': Path('C:/thesis/logs_and_models/spatial_matrix/convnext_upernet/convnext_upernet_6ch_corrected_fold2/models'), 'log_folder': Path('../logs_and_models/spatial_matrix/convnext_upernet/convnext_upernet_6ch_corrected_fold2/logs'), 'sceduler': 'fit_one_cycle'}
+ codes: ['unknown' 'asfalt' 'fliser' 'grus' 'ubefestet' 'green_roof' 'drivhus'
+ 'betonflade' 'brosten' 'unknown2' 'solceller']
+using pin_memory ########################################################################
+experiment_settings_dict['prefetch_factor']: 2
+Using CrossEntropyLoss with ignore_index=0
+Building ConvNeXt (V1) + UPerNet
+Loaded 11 classes from codes file: ['unknown', 'asfalt', 'fliser', 'grus', 'ubefestet', 'green_roof', 'drivhus', 'betonflade', 'brosten', 'unknown2', 'solceller']
+[transformers] You passed `num_labels=11` which is incompatible to the `id2label` map of length `150`.
+Loading weights: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 430/430 [00:00<00:00, 4148.59it/s]
+[transformers] [1mUperNetForSemanticSegmentation LOAD REPORT[0m from: openmmlab/upernet-convnext-base
+Key                              | Status   | Details
+---------------------------------+----------+------------------------------------------------------------------------------------------------------
+auxiliary_head.classifier.bias   | [33mMISMATCH[0m | Reinit due to size mismatch - ckpt: torch.Size([150]) vs model:torch.Size([11])
+decode_head.classifier.bias      | [33mMISMATCH[0m | Reinit due to size mismatch - ckpt: torch.Size([150]) vs model:torch.Size([11])
+decode_head.classifier.weight    | [33mMISMATCH[0m | Reinit due to size mismatch - ckpt: torch.Size([150, 512, 1, 1]) vs model:torch.Size([11, 512, 1, 1])
+auxiliary_head.classifier.weight | [33mMISMATCH[0m | Reinit due to size mismatch - ckpt: torch.Size([150, 256, 1, 1]) vs model:torch.Size([11, 256, 1, 1])
+
+Notes:
+- [33mMISMATCH:[0m	[3mckpt weights were loaded, but they did not match the original empty weight shapes.[0m
+training with bf16 mixed precision
+all data has now been predicted                                                                                                        
