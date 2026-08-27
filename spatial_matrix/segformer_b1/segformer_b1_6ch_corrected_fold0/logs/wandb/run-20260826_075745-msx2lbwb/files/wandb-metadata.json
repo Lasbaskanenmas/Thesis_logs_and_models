@@ -1,0 +1,40 @@
+{
+  "os": "Windows-10-10.0.17763-SP0",
+  "python": "CPython 3.10.20",
+  "startedAt": "2026-08-26T14:57:45.949403Z",
+  "args": [
+    "--config",
+    "configs/matrix_configs/train/segformer_b1_6ch_corrected_fold0.ini"
+  ],
+  "program": "c:\\thesis\\ML_sdfi_fastai2\\src\\ML_sdfi_fastai2\\segformer_train.py",
+  "codePath": "src\\ML_sdfi_fastai2\\segformer_train.py",
+  "codePathLocal": "src\\ML_sdfi_fastai2\\segformer_train.py",
+  "email": "last24ag@student.cbs.dk",
+  "root": "C:\\thesis\\logs_and_models\\spatial_matrix\\segformer_b1\\segformer_b1_6ch_corrected_fold0\\logs",
+  "host": "H6-GPU-WIN-03",
+  "executable": "c:\\thesis\\envs\\ML_sdfi\\python.exe",
+  "cpu_count": 64,
+  "cpu_count_logical": 64,
+  "gpu": "GRID A100-40C",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "10994469302272",
+      "used": "5395131273216"
+    }
+  },
+  "memory": {
+    "total": "137437933568"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "GRID A100-40C",
+      "memoryTotal": "42949672960",
+      "cudaCores": 6912,
+      "architecture": "Ampere",
+      "uuid": "GPU-0877e7dc-2e4b-11b2-a5c4-d667e41cc6e3"
+    }
+  ],
+  "cudaVersion": "13.0",
+  "writerId": "3mtz6hfnvrpuvax5q1qm8nfax21cs57k"
+}
