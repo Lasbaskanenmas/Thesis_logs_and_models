@@ -1,0 +1,111 @@
+routes: 16   total tiles: 19,314
+
+=== BASELINE: the frozen 16-route split, as a control ===
+  fold sizes 6,439 / 6,437 / 6,438  imbalance 2
+  cross-fold pairs 6,783, tiles 1,281 (6.63 %), naive area 18.3640 km²
+  by route pair: 82-20 x 82-21: 3,286, 85-45 x 85-48: 3,019, 84-40 x 84-41: 478
+
+=== TASK 4 - merged {82-20,82-21} and {85-45,85-48}: 14 blocking units ===
+  84-40             5,269 tiles  2021+2023
+  83-25             3,630 tiles  2021
+  82-24             1,529 tiles  2021+2023
+  82-11             1,441 tiles  2021
+  82-22             1,360 tiles  2021
+  83-26             1,228 tiles  2021
+  82-13             1,043 tiles  2021
+  83-31             1,020 tiles  2021
+  82-20+82-21         921 tiles  2021 (MERGED)
+  82-19               591 tiles  2021
+  85-45+85-48         551 tiles  2023 (MERGED)
+  82-16               378 tiles  2021
+  84-41               343 tiles  2021+2023
+  83-34                10 tiles  2021
+  green_roof units (hard span): ['82-24', '84-40']
+  whales (must split):          ['84-40', '83-25']
+
+  feasible assignments passing the checker: 349,920
+  SELECTED (min imbalance, then leximin, then canonical): fold sizes 6,421 / 6,457 / 6,436   imbalance 36 tiles (0.19 % of the pool)
+    fold 0:  6,421 tiles | ['84-40', '82-19', '85-45+85-48', '83-34']
+    fold 1:  6,457 tiles | ['83-25', '82-11', '82-13', '84-41']
+    fold 2:  6,436 tiles | ['82-24', '82-22', '83-26', '83-31', '82-20+82-21', '82-16']
+  checker on selected: PASS
+    (c) asfalt      spans folds [0, 1, 2] (3/3)
+    (c) fliser      spans folds [0, 1, 2] (3/3)
+    (c) grus        spans folds [0, 1, 2] (3/3)
+    (c) ubefestet   spans folds [0, 1, 2] (3/3)
+    (c) green_roof  spans folds [0, 2] (2/3)
+    (c) drivhus     spans folds [0, 1, 2] (3/3)
+    (c) betonflade  spans folds [0, 1, 2] (3/3)
+    (c) brosten     spans folds [0, 1, 2] (3/3)
+    (c) solceller   spans folds [0, 1, 2] (3/3)
+
+  TASK 5 residual cross-fold sharing under the SELECTED assignment:
+    cross-fold tile pairs : 478
+    tiles involved        : 123  (0.64 % of 19,314)
+    naive summed overlap  : 1.2608 km²
+    residual by route pair:
+      84-40 x 84-41: 478 pairs
+  minimum achievable residual over all 349,920 feasible assignments: 0 pairs / 0 tiles (0.00 %), at imbalance 181
+
+
+=== VARIANT: merge EVERY overlapping route pair present in the tile data (4 pairs) ===
+  overlapping route pairs: [('82-16', '82-24'), ('82-20', '82-21'), ('84-40', '84-41'), ('85-45', '85-48')]
+
+=== VARIANT - all entangled routes merged: 12 blocking units ===
+  84-40+84-41       5,612 tiles  2021+2023 (MERGED)
+  83-25             3,630 tiles  2021
+  82-16+82-24       1,907 tiles  2021+2023 (MERGED)
+  82-11             1,441 tiles  2021
+  82-22             1,360 tiles  2021
+  83-26             1,228 tiles  2021
+  82-13             1,043 tiles  2021
+  83-31             1,020 tiles  2021
+  82-20+82-21         921 tiles  2021 (MERGED)
+  82-19               591 tiles  2021
+  85-45+85-48         551 tiles  2023 (MERGED)
+  83-34                10 tiles  2021
+  green_roof units (hard span): ['82-16+82-24', '84-40+84-41']
+  whales (must split):          ['84-40+84-41', '83-25']
+  this is the only variant that can drive the residual to zero
+
+  feasible assignments passing the checker: 37,908
+  SELECTED (min imbalance, then leximin, then canonical): fold sizes 6,533 / 6,429 / 6,352   imbalance 181 tiles (0.94 % of the pool)
+    fold 0:  6,533 tiles | ['84-40+84-41', '82-20+82-21']
+    fold 1:  6,429 tiles | ['83-25', '83-26', '83-31', '85-45+85-48']
+    fold 2:  6,352 tiles | ['82-16+82-24', '82-11', '82-22', '82-13', '82-19', '83-34']
+  checker on selected: PASS
+    (c) asfalt      spans folds [0, 1, 2] (3/3)
+    (c) fliser      spans folds [0, 1, 2] (3/3)
+    (c) grus        spans folds [0, 1, 2] (3/3)
+    (c) ubefestet   spans folds [0, 1, 2] (3/3)
+    (c) green_roof  spans folds [0, 2] (2/3)
+    (c) drivhus     spans folds [0, 1, 2] (3/3)
+    (c) betonflade  spans folds [0, 2] (2/3)
+    (c) brosten     spans folds [0, 1, 2] (3/3)
+    (c) solceller   spans folds [0, 1, 2] (3/3)
+
+  TASK 5 residual cross-fold sharing under the SELECTED assignment:
+    cross-fold tile pairs : 0
+    tiles involved        : 0  (0.00 % of 19,314)
+    naive summed overlap  : 0.0000 km²
+  minimum achievable residual over all 37,908 feasible assignments: 0 pairs / 0 tiles (0.00 %), at imbalance 181
+
+
+=== TASK 4 - observed compute cost, from the wandb run summaries on disk ===
+  jobs with a wandb summary: 90
+
+  model               jobs  train runs   train h  mean h/run  infer runs   infer h   total h
+  _smoke                 1           1      0.67        0.67           0      0.00      0.67
+  convnext_upernet      24          24    221.86        9.24          24      6.88    228.74
+  segformer_b1          20          20    172.39        8.62          18      5.26    177.66
+  swin_upernet          21          21    209.80        9.99          21      6.09    215.89
+  unet_resnet34         24          24    199.61        8.32          24      6.82    206.43
+  TOTAL                 90          90    804.32                      87     25.06    829.38
+
+  Observed grand total on disk: 829.4 GPU-hours over 90 training runs + 87 inference runs.
+  distinct cells reconstructable from job names: 32 (29 excluding the lc25/50/75 probes)
+  cost of the 29 matrix cells alone (train+infer): 819.2 GPU-hours
+
+  >>> The 24 cells in matrix_results_all_cells.csv: 24/24 matched, 72 fold-runs
+  >>> RERUN COST of remedy (b) = 687.4 GPU-hours (666.5 h training + 20.9 h inference)
+  >>> mean per fold-run: 9.55 h; on one GPU that is 28.6 days of wall clock at 100 % utilisation

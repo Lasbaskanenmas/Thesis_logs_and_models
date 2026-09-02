@@ -1,0 +1,36 @@
+cross-fold pairs: 6,783
+geometry check vs overlap_m2: 6,584 rectangles compared, 0 disagree by >1.5 m²
+tiles with at least one shared window: 1,262
+shared pixels: 1,168,348,100 of 1,262,000,000 contaminated-tile pixels (92.58 %)
+contaminated tiles per fold: [210, 305, 747]
+cached 1,262 labels in 7.7s
+cells: 24
+  convnext_upernet_10ch                acc 0.9370->0.9344 (d=-0.0027)  mIoU 0.4030->0.6215 (d=+0.2185)  85s
+  convnext_upernet_10ch_unw            acc 0.9440->0.9239 (d=-0.0201)  mIoU 0.3709->0.5861 (d=+0.2152)  85s
+  convnext_upernet_6ch                 acc 0.9351->0.9204 (d=-0.0147)  mIoU 0.3946->0.5641 (d=+0.1695)  86s
+  convnext_upernet_6ch_unw             acc 0.9288->0.9271 (d=-0.0017)  mIoU 0.3551->0.5526 (d=+0.1976)  87s
+  convnext_upernet_rgb                 acc 0.9393->0.9282 (d=-0.0110)  mIoU 0.3962->0.5664 (d=+0.1701)  86s
+  convnext_upernet_rgb_unw             acc 0.9381->0.9309 (d=-0.0072)  mIoU 0.3555->0.5405 (d=+0.1850)  87s
+  segformer_b1_10ch                    acc 0.9274->0.8749 (d=-0.0524)  mIoU 0.3782->0.4158 (d=+0.0376)  79s
+  segformer_b1_10ch_unw                acc 0.9116->0.8582 (d=-0.0534)  mIoU 0.2904->0.3877 (d=+0.0973)  63s
+  segformer_b1_6ch                     acc 0.9288->0.8690 (d=-0.0598)  mIoU 0.3316->0.4229 (d=+0.0913)  79s
+  segformer_b1_6ch_unw                 acc 0.9033->0.8552 (d=-0.0481)  mIoU 0.2740->0.3745 (d=+0.1004)  79s
+  segformer_b1_rgb                     acc 0.9138->0.8573 (d=-0.0565)  mIoU 0.3697->0.4054 (d=+0.0358)  67s
+  segformer_b1_rgb_unw                 acc 0.9205->0.8691 (d=-0.0515)  mIoU 0.3107->0.3969 (d=+0.0862)  82s
+  swin_upernet_10ch                    acc 0.9279->0.9061 (d=-0.0218)  mIoU 0.3600->0.4657 (d=+0.1056)  83s
+  swin_upernet_10ch_unw                acc 0.9268->0.8992 (d=-0.0276)  mIoU 0.3153->0.4361 (d=+0.1208)  83s
+  swin_upernet_6ch                     acc 0.9341->0.9000 (d=-0.0342)  mIoU 0.3221->0.4476 (d=+0.1255)  81s
+  swin_upernet_6ch_unw                 acc 0.9230->0.8927 (d=-0.0303)  mIoU 0.2979->0.4230 (d=+0.1251)  81s
+  swin_upernet_rgb                     acc 0.9345->0.8994 (d=-0.0351)  mIoU 0.3765->0.4489 (d=+0.0724)  81s
+  swin_upernet_rgb_unw                 acc 0.9394->0.9011 (d=-0.0383)  mIoU 0.3467->0.4348 (d=+0.0881)  83s
+  unet_resnet34_10ch                   acc 0.8988->0.8440 (d=-0.0548)  mIoU 0.3035->0.3506 (d=+0.0471)  83s
+  unet_resnet34_10ch_unw               acc 0.8999->0.8470 (d=-0.0529)  mIoU 0.2628->0.3520 (d=+0.0892)  83s
+  unet_resnet34_6ch                    acc 0.8980->0.8466 (d=-0.0514)  mIoU 0.2690->0.3766 (d=+0.1076)  83s
+  unet_resnet34_6ch_unw                acc 0.9169->0.8680 (d=-0.0489)  mIoU 0.2955->0.3791 (d=+0.0836)  82s
+  unet_resnet34_rgb                    acc 0.9189->0.8545 (d=-0.0644)  mIoU 0.3084->0.3953 (d=+0.0870)  85s
+  unet_resnet34_rgb_unw                acc 0.9279->0.8715 (d=-0.0565)  mIoU 0.3234->0.3914 (d=+0.0680)  81s
+
+=== shared vs unshared window, across 24 cells ===
+  accuracy gap  : mean -0.0373  median -0.0432  min -0.0644  max -0.0017  positive in 0/24
+  Macro-IoU gap : mean +0.1135  median +0.0989  min +0.0358  max +0.2185  positive in 24/24
+  A POSITIVE gap means the model scores BETTER on ground whose labels it already saw in training = the leakage signature. A gap near zero means the Task-2 delta is composition, not leakage.

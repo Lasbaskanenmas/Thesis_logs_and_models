@@ -1,0 +1,46 @@
+routes with both contaminated and clean tiles:
+  82-20 (fold 2): 522 contaminated / 86 clean
+  84-40 (fold 0): 62 contaminated / 600 clean  [clean side subsampled from 5,207, seed 20260827]
+  84-41 (fold 2): 61 contaminated / 282 clean
+  85-45 (fold 2): 173 contaminated / 228 clean
+
+cells: 24
+cached 2,014 labels in 25.8s
+  convnext_upernet_10ch              157s
+  convnext_upernet_10ch_unw          161s
+  convnext_upernet_6ch               230s
+  convnext_upernet_6ch_unw           192s
+  convnext_upernet_rgb               190s
+  convnext_upernet_rgb_unw           146s
+  segformer_b1_10ch                  130s
+  segformer_b1_10ch_unw              190s
+  segformer_b1_6ch                   186s
+  segformer_b1_6ch_unw               189s
+  segformer_b1_rgb                   184s
+  segformer_b1_rgb_unw               124s
+  swin_upernet_10ch                  148s
+  swin_upernet_10ch_unw              155s
+  swin_upernet_6ch                   158s
+  swin_upernet_6ch_unw               160s
+  swin_upernet_rgb                   160s
+  swin_upernet_rgb_unw               170s
+  unet_resnet34_10ch                 172s
+  unet_resnet34_10ch_unw             172s
+  unet_resnet34_6ch                  172s
+  unet_resnet34_6ch_unw              171s
+  unet_resnet34_rgb                  176s
+  unet_resnet34_rgb_unw              170s
+
+=== route-matched: contaminated minus clean, within the same route ===
+route    fold  n_con  n_cln  acc_con  acc_cln    d_acc  mIoU_con  mIoU_cln   d_mIoU  cells+
+82-20       2    522     86   0.8252   0.7437  +0.0816    0.2971    0.2893  +0.007824/ 24
+84-40       0     62    600   0.9833   0.7939  +0.1894    0.6117    0.2037  +0.408024/ 24
+84-41       2     61    282   0.9908   0.9148  +0.0760    0.9461    0.3475  +0.598524/ 24
+85-45       2    173    228   0.9669   0.8764  +0.0905    0.9426    0.7877  +0.154924/ 24
+
+per-class IoU gap (contaminated - clean), mean over cells, by route:
+route        asfalt     fliser       grus  ubefestet  green_roo    drivhus  betonflad    brosten  solceller
+82-20       +0.0505    +0.0606    +0.0895    +0.0560    +0.0000    +0.0341    +0.0353    +0.0123    +0.0185
+84-40       +0.3300    -0.1519    -0.1757    +0.1213        n/a    -0.0140    -0.0545        n/a    -0.0181
+84-41       +0.6941    -0.0068    -0.0921    +0.0764    +0.0000    +0.0000    +0.0000    +0.0000    -0.4346
+85-45       +0.0000    +0.0000    +0.9541    +0.2257        n/a    +0.0000    +0.0000    +0.0000    +0.0727

@@ -1,0 +1,41 @@
+{
+  "max_csv_json_discrepancy": 0.0,
+  "findings": [
+    {
+      "severity": "INFO",
+      "finding": "4 scored cells exist on disk but are absent from matrix_results_all_cells.csv: ['convnext_upernet_6ch_corrected', 'convnext_upernet_rgb_ndsm', 'swin_upernet_6ch_corrected', 'unet_resnet34_6ch_corrected']"
+    },
+    {
+      "severity": "HIGH",
+      "finding": "_smoke/convnext_upernet_rgb_ndsm_smoke: trained (checkpoints present) but ZERO predictions -> inference never run, cell cannot be scored or rescored"
+    },
+    {
+      "severity": "HIGH",
+      "finding": "_smoke/smoke_weighted_loss_resnet34_6ch: trained (checkpoints present) but ZERO predictions -> inference never run, cell cannot be scored or rescored"
+    },
+    {
+      "severity": "HIGH",
+      "finding": "segformer_b1/segformer_b1_6ch_corrected_fold0: trained (checkpoints present) but ZERO predictions -> inference never run, cell cannot be scored or rescored"
+    },
+    {
+      "severity": "HIGH",
+      "finding": "segformer_b1/segformer_b1_6ch_corrected_fold1: trained (checkpoints present) but ZERO predictions -> inference never run, cell cannot be scored or rescored"
+    },
+    {
+      "severity": "HIGH",
+      "finding": "segformer_b1/segformer_b1_6ch_corrected_fold2: trained (checkpoints present) but ZERO predictions -> inference never run, cell cannot be scored or rescored"
+    },
+    {
+      "severity": "HIGH",
+      "finding": "design document '2026-07-29_the_great_plan_3.0.md' named by the work order is NOT present anywhere under C:\\thesis - claims could not be checked against it"
+    },
+    {
+      "severity": "HIGH",
+      "finding": "design document '2026-06-26_create_spatial_folds.md' named by the work order is NOT present anywhere under C:\\thesis - claims could not be checked against it"
+    },
+    {
+      "severity": "HIGH",
+      "finding": "design document '2026-07-28_matrix_results_and_handoff.md' named by the work order is NOT present anywhere under C:\\thesis - claims could not be checked against it"
+    }
+  ]
+}

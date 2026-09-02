@@ -1,0 +1,376 @@
+{
+  "n_all_tiles": 19314,
+  "n_commented_out": 4,
+  "n_cross_route_pairs": 8120,
+  "n_cross_fold_pairs": 6783,
+  "n_contaminated": 1281,
+  "n_clean": 18033,
+  "pct_contaminated": 6.632494563529046,
+  "fold_sizes": {
+    "0": 6439,
+    "1": 6437,
+    "2": 6438
+  },
+  "contaminated_by_fold": {
+    "0": 212,
+    "1": 313,
+    "2": 756
+  },
+  "contaminated_by_route": {
+    "82-21": 313,
+    "85-45": 173,
+    "82-20": 522,
+    "85-48": 150,
+    "84-41": 61,
+    "84-40": 62
+  },
+  "route_to_fold": {
+    "84-40": 0,
+    "83-31": 0,
+    "85-48": 0,
+    "83-25": 1,
+    "82-11": 1,
+    "82-13": 1,
+    "82-21": 1,
+    "83-34": 1,
+    "82-24": 2,
+    "82-22": 2,
+    "83-26": 2,
+    "82-20": 2,
+    "82-19": 2,
+    "85-45": 2,
+    "82-16": 2,
+    "84-41": 2
+  },
+  "route_tiles": {
+    "84-40": 5269,
+    "83-31": 1020,
+    "85-45": 401,
+    "82-11": 1441,
+    "82-21": 313,
+    "82-16": 378,
+    "82-22": 1360,
+    "83-25": 3630,
+    "83-26": 1228,
+    "82-13": 1043,
+    "82-24": 1529,
+    "82-20": 608,
+    "83-34": 10,
+    "82-19": 591,
+    "85-48": 150,
+    "84-41": 343
+  },
+  "scored_px_all": 12194633781,
+  "scored_px_contaminated": 610523718,
+  "scored_px_clean": 11584110063,
+  "overlap_per_pair_m2": {
+    "min": 9.0,
+    "median": 2370.0,
+    "mean": 2707.3547103051746,
+    "max": 9603.0,
+    "p10": 456.0,
+    "p90": 5456.0
+  },
+  "overlap_per_tile_m2": {
+    "min": 1488.0,
+    "median": 20700.0,
+    "mean": 28671.330210772834,
+    "max": 103100.0,
+    "p10": 10000.0,
+    "p90": 57000.0
+  },
+  "capped_per_tile": {
+    "median_pct": 100.0,
+    "mean_pct": 97.10306010928961,
+    "n_ge_50pct": 1265,
+    "n_ge_90pct": 1182
+  },
+  "task3_class_support": {
+    "asfalt": {
+      "px_all": 818756115,
+      "px_contaminated": 116674782,
+      "px_clean": 702081333,
+      "pct_px_lost": 14.250248622570593,
+      "tiles_all": 5919,
+      "tiles_contaminated": 666,
+      "tiles_clean": 5253,
+      "pct_tiles_lost": 11.251900658895083,
+      "pool_pixel_share_pct": 6.714068906896352,
+      "contaminated_pixel_share_pct": 19.110605953559368,
+      "enrichment_ratio": 2.846352371202196
+    },
+    "fliser": {
+      "px_all": 231902162,
+      "px_contaminated": 33743672,
+      "px_clean": 198158490,
+      "pct_px_lost": 14.550822514539558,
+      "tiles_all": 3934,
+      "tiles_contaminated": 447,
+      "tiles_clean": 3487,
+      "pct_tiles_lost": 11.362480935434672,
+      "pool_pixel_share_pct": 1.9016738523244383,
+      "contaminated_pixel_share_pct": 5.527004276023884,
+      "enrichment_ratio": 2.9063891630355867
+    },
+    "grus": {
+      "px_all": 206716845,
+      "px_contaminated": 39082343,
+      "px_clean": 167634502,
+      "pct_px_lost": 18.90622072913313,
+      "tiles_all": 3936,
+      "tiles_contaminated": 560,
+      "tiles_clean": 3376,
+      "pct_tiles_lost": 14.227642276422765,
+      "pool_pixel_share_pct": 1.6951459856226083,
+      "contaminated_pixel_share_pct": 6.401445488150552,
+      "enrichment_ratio": 3.7763387592835387
+    },
+    "ubefestet": {
+      "px_all": 10667088919,
+      "px_contaminated": 402242847,
+      "px_clean": 10264846072,
+      "pct_px_lost": 3.7708774160824072,
+      "tiles_all": 17626,
+      "tiles_contaminated": 1096,
+      "tiles_clean": 16530,
+      "pct_tiles_lost": 6.218086917054351,
+      "pool_pixel_share_pct": 87.4736307015631,
+      "contaminated_pixel_share_pct": 65.88488459018393,
+      "enrichment_ratio": 0.7531970956477815
+    },
+    "green_roof": {
+      "px_all": 1430413,
+      "px_contaminated": 0,
+      "px_clean": 1430413,
+      "pct_px_lost": 0.0,
+      "tiles_all": 90,
+      "tiles_contaminated": 0,
+      "tiles_clean": 90,
+      "pct_tiles_lost": 0.0,
+      "pool_pixel_share_pct": 0.011729856145648856,
+      "contaminated_pixel_share_pct": 0.0,
+      "enrichment_ratio": 0.0,
+      "by_route": {
+        "82-24": {
+          "tiles_with_class": 17,
+          "contaminated": 0,
+          "fold": 2
+        },
+        "84-40": {
+          "tiles_with_class": 73,
+          "contaminated": 0,
+          "fold": 0
+        }
+      }
+    },
+    "drivhus": {
+      "px_all": 531496,
+      "px_contaminated": 93052,
+      "px_clean": 438444,
+      "pct_px_lost": 17.507563556451977,
+      "tiles_all": 328,
+      "tiles_contaminated": 54,
+      "tiles_clean": 274,
+      "pct_tiles_lost": 16.463414634146343,
+      "pool_pixel_share_pct": 0.004358441668236925,
+      "contaminated_pixel_share_pct": 0.015241340713973704,
+      "enrichment_ratio": 3.4969702187477307,
+      "by_route": {
+        "83-25": {
+          "tiles_with_class": 49,
+          "contaminated": 0,
+          "fold": 1
+        },
+        "82-22": {
+          "tiles_with_class": 61,
+          "contaminated": 0,
+          "fold": 2
+        },
+        "84-40": {
+          "tiles_with_class": 94,
+          "contaminated": 0,
+          "fold": 0
+        },
+        "82-20": {
+          "tiles_with_class": 47,
+          "contaminated": 35,
+          "fold": 2
+        },
+        "82-19": {
+          "tiles_with_class": 41,
+          "contaminated": 0,
+          "fold": 2
+        },
+        "82-24": {
+          "tiles_with_class": 17,
+          "contaminated": 0,
+          "fold": 2
+        },
+        "82-21": {
+          "tiles_with_class": 19,
+          "contaminated": 19,
+          "fold": 1
+        }
+      }
+    },
+    "betonflade": {
+      "px_all": 89260373,
+      "px_contaminated": 1253296,
+      "px_clean": 88007077,
+      "pct_px_lost": 1.4040900322027559,
+      "tiles_all": 598,
+      "tiles_contaminated": 52,
+      "tiles_clean": 546,
+      "pct_tiles_lost": 8.695652173913043,
+      "pool_pixel_share_pct": 0.7319643591025524,
+      "contaminated_pixel_share_pct": 0.20528211485470904,
+      "enrichment_ratio": 0.2804537028365719,
+      "by_route": {
+        "82-13": {
+          "tiles_with_class": 144,
+          "contaminated": 0,
+          "fold": 1
+        },
+        "84-40": {
+          "tiles_with_class": 328,
+          "contaminated": 0,
+          "fold": 0
+        },
+        "82-22": {
+          "tiles_with_class": 41,
+          "contaminated": 0,
+          "fold": 2
+        },
+        "82-24": {
+          "tiles_with_class": 11,
+          "contaminated": 0,
+          "fold": 2
+        },
+        "82-21": {
+          "tiles_with_class": 15,
+          "contaminated": 15,
+          "fold": 1
+        },
+        "82-19": {
+          "tiles_with_class": 21,
+          "contaminated": 0,
+          "fold": 2
+        },
+        "82-20": {
+          "tiles_with_class": 38,
+          "contaminated": 37,
+          "fold": 2
+        }
+      }
+    },
+    "brosten": {
+      "px_all": 120321684,
+      "px_contaminated": 89825,
+      "px_clean": 120231859,
+      "pct_px_lost": 0.07465404157741011,
+      "tiles_all": 1928,
+      "tiles_contaminated": 32,
+      "tiles_clean": 1896,
+      "pct_tiles_lost": 1.6597510373443984,
+      "pool_pixel_share_pct": 0.9866773054510968,
+      "contaminated_pixel_share_pct": 0.01471277812011228,
+      "enrichment_ratio": 0.01491143866270014,
+      "by_route": {
+        "84-40": {
+          "tiles_with_class": 1450,
+          "contaminated": 0,
+          "fold": 0
+        },
+        "82-21": {
+          "tiles_with_class": 12,
+          "contaminated": 12,
+          "fold": 1
+        },
+        "82-24": {
+          "tiles_with_class": 426,
+          "contaminated": 0,
+          "fold": 2
+        },
+        "82-20": {
+          "tiles_with_class": 29,
+          "contaminated": 20,
+          "fold": 2
+        },
+        "82-22": {
+          "tiles_with_class": 3,
+          "contaminated": 0,
+          "fold": 2
+        },
+        "83-25": {
+          "tiles_with_class": 5,
+          "contaminated": 0,
+          "fold": 1
+        },
+        "82-19": {
+          "tiles_with_class": 3,
+          "contaminated": 0,
+          "fold": 2
+        }
+      }
+    },
+    "solceller": {
+      "px_all": 58625774,
+      "px_contaminated": 17343901,
+      "px_clean": 41281873,
+      "pct_px_lost": 29.58408873203107,
+      "tiles_all": 568,
+      "tiles_contaminated": 244,
+      "tiles_clean": 324,
+      "pct_tiles_lost": 42.95774647887324,
+      "pool_pixel_share_pct": 0.48075059122597524,
+      "contaminated_pixel_share_pct": 2.8408234583934706,
+      "enrichment_ratio": 5.909141892366703,
+      "by_route": {
+        "85-45": {
+          "tiles_with_class": 326,
+          "contaminated": 109,
+          "fold": 2
+        },
+        "84-40": {
+          "tiles_with_class": 28,
+          "contaminated": 0,
+          "fold": 0
+        },
+        "82-19": {
+          "tiles_with_class": 46,
+          "contaminated": 0,
+          "fold": 2
+        },
+        "84-41": {
+          "tiles_with_class": 33,
+          "contaminated": 0,
+          "fold": 2
+        },
+        "85-48": {
+          "tiles_with_class": 108,
+          "contaminated": 108,
+          "fold": 0
+        },
+        "82-21": {
+          "tiles_with_class": 10,
+          "contaminated": 10,
+          "fold": 1
+        },
+        "82-20": {
+          "tiles_with_class": 17,
+          "contaminated": 17,
+          "fold": 2
+        }
+      }
+    }
+  },
+  "consistency": {
+    "fold_col_disagreements_overlaps_csv": 0,
+    "route_col_disagreements_overlaps_csv": 0,
+    "overlap_tiles_not_in_all_txt": 0,
+    "inventory_fold_disagreements": 0,
+    "all_txt_tiles_missing_from_inventory": 0,
+    "fold_assignment_count_mismatch": {},
+    "n_tile_inventory_rows": 19314
+  }
+}

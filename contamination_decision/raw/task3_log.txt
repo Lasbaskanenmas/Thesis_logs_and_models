@@ -1,0 +1,118 @@
+all.txt: 19,314 active tiles, 4 commented out
+fold_assignment tile counts match all.txt: True
+fold sizes from all.txt: fold0=6,439, fold1=6,437, fold2=6,438
+
+cross_route_tile_overlaps.csv: 8,120 cross-route pairs
+  of which cross-FOLD (fold_a != fold_b): 6,783
+  fold column disagreements vs fold_assignment.csv: 0
+  route column disagreements vs filename:           0
+  tiles in overlaps CSV not present in all.txt:      0
+
+CONTAMINATED TILES (union of both sides of cross-fold pairs): 1,281
+  as share of 19,314: 6.63 %
+  clean tiles retained: 18,033
+
+Contaminated tiles by fold:
+  fold 0:   212 / 6,439  = 3.29 %
+  fold 1:   313 / 6,437  = 4.86 %
+  fold 2:   756 / 6,438  = 11.74 %
+
+Contaminated tiles by route:
+  82-20 (fold 2):   522 / 608  = 85.9 %
+  82-21 (fold 1):   313 / 313  = 100.0 %
+  85-45 (fold 2):   173 / 401  = 43.1 %
+  85-48 (fold 0):   150 / 150  = 100.0 %
+  84-40 (fold 0):    62 / 5,269  = 1.2 %
+  84-41 (fold 2):    61 / 343  = 17.8 %
+
+Cross-fold overlap area, PER PAIR (m^2 of a 10,000 m^2 tile):
+  min            9.0
+  p10          456.0
+  median     2,370.0
+  mean       2,707.4
+  p90        5,456.0
+  max        9,603.0
+
+Cross-fold overlap area, PER CONTAMINATED TILE (summed over its pairs, may exceed 10,000):
+  min        1,488.0
+  p10       10,000.0
+  median    20,700.0
+  mean      28,671.3
+  p90       57,000.0
+  max      103,100.0
+
+Per-tile shared share, capped at the tile area (upper bound on the truly shared fraction):
+  median 100.0 %   mean 97.1 %   tiles >=50% shared: 1,265   >=90%: 1,182
+
+tile_inventory.csv: 19,314 rows
+  all.txt tiles missing from inventory: 0
+  inventory 'fold' column disagreements vs fold_assignment.csv: 0
+
+Scored (non-unknown) label pixels:  all=12,194,633,781  contaminated=610,523,718 (5.01 %)  clean=11,584,110,063
+
+=== TASK 3: class support, contaminated set vs whole pool ===
+class                px_all     px_contam  %px lost  tiles_all  tiles_contam  %tiles lost  tiles_clean
+------------------------------------------------------------------------------------------------------
+asfalt          818,756,115   116,674,782    14.25%      5,919           666       11.25%        5,253
+fliser          231,902,162    33,743,672    14.55%      3,934           447       11.36%        3,487
+grus            206,716,845    39,082,343    18.91%      3,936           560       14.23%        3,376
+ubefestet    10,667,088,919   402,242,847     3.77%     17,626         1,096        6.22%       16,530
+green_roof        1,430,413             0     0.00%         90             0        0.00%           90
+drivhus             531,496        93,052    17.51%        328            54       16.46%          274
+betonflade       89,260,373     1,253,296     1.40%        598            52        8.70%          546
+brosten         120,321,684        89,825     0.07%      1,928            32        1.66%        1,896
+solceller        58,625,774    17,343,901    29.58%        568           244       42.96%          324
+
+Class mix (share of scored pixels within each set):
+class           pool %   contam %    ratio
+asfalt         6.7141%   19.1106%     2.85
+fliser         1.9017%    5.5270%     2.91
+grus           1.6951%    6.4014%     3.78
+ubefestet     87.4736%   65.8849%     0.75
+green_roof     0.0117%    0.0000%     0.00
+drivhus        0.0044%    0.0152%     3.50
+betonflade     0.7320%    0.2053%     0.28
+brosten        0.9867%    0.0147%     0.01
+solceller      0.4808%    2.8408%     5.91
+
+=== Rare-class tile support by route, contaminated vs total ===
+
+  green_roof:
+    84-40 (fold 0):    73 tiles with green_roof,     0 contaminated (0.0 %)
+    82-24 (fold 2):    17 tiles with green_roof,     0 contaminated (0.0 %)
+
+  drivhus:
+    84-40 (fold 0):    94 tiles with drivhus,     0 contaminated (0.0 %)
+    82-22 (fold 2):    61 tiles with drivhus,     0 contaminated (0.0 %)
+    83-25 (fold 1):    49 tiles with drivhus,     0 contaminated (0.0 %)
+    82-20 (fold 2):    47 tiles with drivhus,    35 contaminated (74.5 %)
+    82-19 (fold 2):    41 tiles with drivhus,     0 contaminated (0.0 %)
+    82-21 (fold 1):    19 tiles with drivhus,    19 contaminated (100.0 %)
+    82-24 (fold 2):    17 tiles with drivhus,     0 contaminated (0.0 %)
+
+  betonflade:
+    84-40 (fold 0):   328 tiles with betonflade,     0 contaminated (0.0 %)
+    82-13 (fold 1):   144 tiles with betonflade,     0 contaminated (0.0 %)
+    82-22 (fold 2):    41 tiles with betonflade,     0 contaminated (0.0 %)
+    82-20 (fold 2):    38 tiles with betonflade,    37 contaminated (97.4 %)
+    82-19 (fold 2):    21 tiles with betonflade,     0 contaminated (0.0 %)
+    82-21 (fold 1):    15 tiles with betonflade,    15 contaminated (100.0 %)
+    82-24 (fold 2):    11 tiles with betonflade,     0 contaminated (0.0 %)
+
+  solceller:
+    85-45 (fold 2):   326 tiles with solceller,   109 contaminated (33.4 %)
+    85-48 (fold 0):   108 tiles with solceller,   108 contaminated (100.0 %)
+    82-19 (fold 2):    46 tiles with solceller,     0 contaminated (0.0 %)
+    84-41 (fold 2):    33 tiles with solceller,     0 contaminated (0.0 %)
+    84-40 (fold 0):    28 tiles with solceller,     0 contaminated (0.0 %)
+    82-20 (fold 2):    17 tiles with solceller,    17 contaminated (100.0 %)
+    82-21 (fold 1):    10 tiles with solceller,    10 contaminated (100.0 %)
+
+  brosten:
+    84-40 (fold 0): 1,450 tiles with brosten,     0 contaminated (0.0 %)
+    82-24 (fold 2):   426 tiles with brosten,     0 contaminated (0.0 %)
+    82-20 (fold 2):    29 tiles with brosten,    20 contaminated (69.0 %)
+    82-21 (fold 1):    12 tiles with brosten,    12 contaminated (100.0 %)
+    83-25 (fold 1):     5 tiles with brosten,     0 contaminated (0.0 %)
+    82-22 (fold 2):     3 tiles with brosten,     0 contaminated (0.0 %)
+    82-19 (fold 2):     3 tiles with brosten,     0 contaminated (0.0 %)
